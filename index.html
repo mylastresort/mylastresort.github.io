@@ -525,6 +525,142 @@
     .archive-list a:hover {
       text-decoration: underline;
     }
+
+    /* ══════════════════════════════════════
+       MOBILE  (≤ 768px)
+    ══════════════════════════════════════ */
+    @media (max-width: 768px) {
+
+      /* Nav */
+      nav .nav-inner {
+        padding: 14px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 0;
+      }
+
+      nav a {
+        font-size: 13px;
+        margin-right: 16px;
+      }
+
+      /* Layout: stack sidebar below content */
+      .page-inner {
+        flex-direction: column-reverse;
+      }
+
+      .content-area {
+        padding: 24px 20px 48px;
+      }
+
+      /* Sidebar: horizontal strip at top */
+      .sidebar {
+        width: 100%;
+        min-width: unset;
+        border-left: none;
+        border-bottom: 1px solid var(--border);
+        padding: 24px 20px;
+        flex-direction: column;
+      }
+
+      .sidebar-photo {
+        width: 100px;
+        height: 100px;
+      }
+
+      /* Contact list: horizontal flexbox on mobile */
+      .sidebar-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 8px 0;
+        gap: 0;
+      }
+
+      .sidebar-links li {
+        border-top: 1px solid var(--border);
+        border-right: none;
+        padding: 8px 6px;
+        text-align: center;
+      }
+
+      .sidebar-links li:last-child {
+        border-bottom: none;
+      }
+
+      .sidebar-links a {
+        font-size: 11px;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      /* Article */
+      .article-title {
+        font-size: 24px !important;
+      }
+
+      .article-body h2 {
+        font-size: 18px !important;
+      }
+
+      .article-body p,
+      .article-body li {
+        font-size: 16px;
+      }
+
+      .article-body table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 13px;
+      }
+
+      /* Breadcrumb */
+      .breadcrumb {
+        font-size: 17px;
+      }
+
+      /* Callout */
+      .callout {
+        font-size: 14px;
+        padding: 12px 14px;
+      }
+
+      /* Code blocks */
+      .code-block {
+        font-size: 12px;
+        padding: 12px 14px;
+        overflow-x: auto;
+      }
+
+      /* Archive */
+      .archive-year h3 {
+        font-size: 16px;
+      }
+
+      .archive-list .date {
+        font-size: 11px;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       SMALL PHONES  (≤ 480px)
+    ══════════════════════════════════════ */
+    @media (max-width: 480px) {
+      .sidebar-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar-links li:last-child {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .article-title {
+        font-size: 21px !important;
+      }
+    }
   </style>
 </head>
 
