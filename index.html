@@ -40,7 +40,7 @@
       --font-body: 'Crimson Pro', Georgia, serif;
       --font-mono: 'JetBrains Mono', 'Courier New', monospace;
       --max-w: 1600px;
-      --sidebar-w: 360px;
+      --sidebar-w: 400px;
       color-scheme: light;
     }
 
@@ -247,9 +247,14 @@
     .sidebar-links li {
       border-top: 1px solid var(--border);
       width: 100%;
+      min-width: 0;
       text-align: left;
       box-sizing: border-box;
       cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      height: 52px;
     }
 
     .sidebar-links li:last-child {
@@ -309,13 +314,21 @@
       color: var(--link);
     }
 
-    .sidebar-links .icon {
+.sidebar-links .icon {
       width: 21px;
       height: 21px;
       display: inline-block;
       vertical-align: middle;
       margin-right: 2px;
-      font-style: normal;
+      flex: 0 0 auto;
+    }
+
+    .sidebar-links .link-label {
+      white-space: nowrap;
+      flex: 0 0 auto;
+      line-height: 1;
+      opacity: 1;
+      transition: opacity 0.1s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* ── BREADCRUMB ── */
@@ -560,7 +573,6 @@
       margin-bottom: 16px;
       font-size: 33px;
       color: var(--text);
-      max-width: 680px;
     }
 
     .article-body a {
@@ -749,6 +761,8 @@
         border-right: none;
         padding: 8px 6px;
         text-align: center;
+        height: auto;
+        display: block;
       }
 
       .sidebar-links li:last-child {
@@ -929,7 +943,7 @@
         <div class="breadcrumb"><span>~ / </span>archive</div>
 
         <div class="archive-year">
-          <h3>2025</h3>
+          <h3>2026</h3>
           <ul class="archive-list">
             <li>
               <span class="date">May 14, 2026</span>
@@ -1173,6 +1187,48 @@
     const hash = window.location.hash.slice(1);
     if (hash) showPage(hash);
     else showPage('home');
+
+    // ── CONTACT HOVER LABELS ──
+    document.querySelectorAll('.sidebar-links a').forEach(a => {
+      const href = a.getAttribute('href') || '';
+      let holder = null;
+      if (href.startsWith('mailto:')) holder = href.slice(7);
+      else {
+        const m = href.match(/(?:linkedin\.com\/in\/|github\.com\/|leetcode\.com\/u\/)([^/?#]+)/);
+        if (m) holder = m[1];
+      }
+      if (!holder) return;
+
+      let label = a.querySelector('.hide-mail-label');
+      if (!label) {
+        const textNode = [...a.childNodes].find(n => n.nodeType === 3 && n.textContent.trim());
+        if (!textNode) return;
+        label = document.createElement('span');
+        label.className = 'link-label';
+        label.textContent = textNode.textContent;
+        a.replaceChild(label, textNode);
+      } else {
+        label.classList.add('link-label');
+      }
+
+      const original = label.textContent;
+      let fadeTimer = null;
+
+      function fadeSwap(text) {
+        clearTimeout(fadeTimer);
+        label.style.opacity = '0';
+        fadeTimer = setTimeout(() => {
+          label.textContent = text;
+          requestAnimationFrame(() => {
+            label.style.opacity = '1';
+          });
+        }, 100);
+      }
+
+      a.addEventListener('mouseenter', () => fadeSwap(holder));
+
+      a.addEventListener('mouseleave', () => fadeSwap(original));
+    });
 
     // ── PROFILE PHOTO TILT ──
     const photoFrames = document.querySelectorAll('.photo-frame');
