@@ -41,6 +41,7 @@
       --font-mono: 'JetBrains Mono', 'Courier New', monospace;
       --max-w: 1600px;
       --sidebar-w: 400px;
+      --nav-h: 83px;
       color-scheme: light;
     }
 
@@ -100,6 +101,10 @@
 
     /* ── NAV ── */
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
       border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: center;
@@ -165,6 +170,7 @@
       flex: 1;
       min-width: 0;
       padding: 36px 40px 60px;
+      border-right: 1px solid var(--border);
     }
 
     /* ── SIDEBAR ── */
@@ -172,10 +178,14 @@
       width: var(--sidebar-w);
       min-width: var(--sidebar-w);
       padding: 36px 30px 60px 0;
-      border-left: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: sticky;
+      top: var(--nav-h);
+      align-self: flex-start;
+      max-height: calc(100vh - var(--nav-h));
+      overflow-y: auto;
     }
 
     .photo-frame {
@@ -334,7 +344,7 @@
     /* ── BREADCRUMB ── */
     .breadcrumb {
       font-family: var(--font-mono);
-      font-size: 39px;
+      font-size: 25px;
       font-weight: 400;
       margin-bottom: 20px;
       color: var(--text);
@@ -351,13 +361,6 @@
 
     .breadcrumb a:hover {
       text-decoration: underline;
-    }
-
-    /* Main-content pages use a smaller breadcrumb than the article page */
-    #page-home .content-area > .breadcrumb,
-    #page-projects .content-area > .breadcrumb,
-    #page-archive .content-area > .breadcrumb {
-      font-size: 25px;
     }
 
     /* ── BADGES ── */
@@ -504,7 +507,7 @@
     /* ── ARTICLE ── */
     .article-title {
       font-family: var(--font-body);
-      font-size: 48px;
+      font-size: 31px;
       font-weight: 600;
       margin-bottom: 14px;
       line-height: 1.3;
@@ -519,7 +522,7 @@
 
     .tag {
       font-family: var(--font-mono);
-      font-size: 23px;
+      font-size: 15px;
       display: inline-flex;
       align-items: center;
       border-radius: 3px;
@@ -540,7 +543,7 @@
 
     .article-meta {
       font-family: var(--font-mono);
-      font-size: 24px;
+      font-size: 16px;
       color: var(--muted);
       margin-bottom: 28px;
     }
@@ -550,7 +553,7 @@
       border-left: 3px solid var(--badge-blue-bg);
       padding: 14px 18px;
       margin-bottom: 28px;
-      font-size: 32px;
+      font-size: 21px;
       color: var(--text);
       border-radius: 0 4px 4px 0;
     }
@@ -561,7 +564,7 @@
 
     .article-body h2 {
       font-family: var(--font-body);
-      font-size: 39px;
+      font-size: 25px;
       font-weight: 600;
       margin: 28px 0 10px;
       display: flex;
@@ -572,13 +575,13 @@
     .article-body h2 .hash {
       font-family: var(--font-mono);
       color: var(--link);
-      font-size: 33px;
+      font-size: 21px;
       font-weight: 400;
     }
 
     .article-body p {
       margin-bottom: 16px;
-      font-size: 33px;
+      font-size: 21px;
       color: var(--text);
     }
 
@@ -592,7 +595,7 @@
 
     .article-body code {
       font-family: var(--font-mono);
-      font-size: 26px;
+      font-size: 17px;
       background: #f4f4f4;
       padding: 2px 5px;
       border-radius: 3px;
@@ -602,7 +605,7 @@
       width: 100%;
       border-collapse: collapse;
       margin: 1.2rem 0;
-      font-size: 27px;
+      font-size: 18px;
     }
     .article-body table th,
     .article-body table td {
@@ -622,7 +625,7 @@
       background: #1e1e1e;
       color: #d4d4d4;
       font-family: var(--font-mono);
-      font-size: 26px;
+      font-size: 17px;
       padding: 16px 18px;
       border-radius: 6px;
       overflow-x: auto;
@@ -732,16 +735,20 @@
 
       .content-area {
         padding: 24px 20px 48px;
+        border-right: none;
       }
 
       /* Sidebar: horizontal strip at top */
       .sidebar {
         width: 100%;
         min-width: unset;
-        border-left: none;
         border-bottom: 1px solid var(--border);
         padding: 24px 20px;
         flex-direction: column;
+        position: static;
+        align-self: auto;
+        max-height: none;
+        overflow: visible;
       }
 
       .photo-frame {
@@ -785,45 +792,39 @@
 
       /* Article */
       .article-title {
-        font-size: 42px !important;
+        font-size: 27px !important;
       }
 
       .article-body h2 {
-        font-size: 33px !important;
+        font-size: 21px !important;
       }
 
       .article-body p,
       .article-body li {
-        font-size: 30px;
+        font-size: 20px;
       }
 
       .article-body table {
         display: block;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        font-size: 26px;
+        font-size: 17px;
       }
 
       /* Breadcrumb */
       .breadcrumb {
-        font-size: 32px;
-      }
-
-      #page-home .content-area > .breadcrumb,
-      #page-projects .content-area > .breadcrumb,
-      #page-archive .content-area > .breadcrumb {
         font-size: 21px;
       }
 
       /* Callout */
       .callout {
-        font-size: 27px;
+        font-size: 18px;
         padding: 12px 14px;
       }
 
       /* Code blocks */
       .code-block {
-        font-size: 24px;
+        font-size: 16px;
         padding: 12px 14px;
         overflow-x: auto;
       }
@@ -852,7 +853,7 @@
       }
 
       .article-title {
-        font-size: 38px !important;
+        font-size: 25px !important;
       }
     }
   </style>
@@ -1176,6 +1177,17 @@
       applyTheme(next);
       localStorage.setItem('theme', next);
     });
+
+    // ── STICKY OFFSET (nav height) ──
+    const navEl = document.querySelector('nav');
+
+    function syncNavHeight() {
+      html.style.setProperty('--nav-h', navEl.offsetHeight + 'px');
+    }
+
+    syncNavHeight();
+    window.addEventListener('resize', syncNavHeight);
+    if (window.ResizeObserver) new ResizeObserver(syncNavHeight).observe(navEl);
 
     // ── NAVIGATION ──
     const pages = document.querySelectorAll('.page-wrap');
