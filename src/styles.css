@@ -437,6 +437,11 @@ nav a.active {
   color: var(--link);
 }
 
+.bio .name-accent {
+  font-style: normal;
+  color: var(--link);
+}
+
 /* ── RESUME DOWNLOAD ── */
 .resume-nav {
   display: flex;

@@ -14,7 +14,7 @@ export default function Home({ onNavigate }) {
           <p className="tagline">🛠 Systems programming, applied ML, and things that run fast. Based in Rabat, Morocco.</p>
 
           <h2 className="section-title">Overview</h2>
-          <p className="bio">I'm a <strong>Software Engineer</strong> working on <strong>full-stack development</strong>, <strong>microservices</strong>, and <strong>IoT systems</strong>. I build scalable backends with <strong>FastAPI</strong>, <strong>Spring Boot</strong>, and <strong>Go</strong>, and craft frontends with <strong>Angular</strong> and <strong>React.js</strong>. Right now I'm learning <strong>Data &amp; AI</strong> on top of a solid base in <strong>cloud</strong>, <strong>DevOps</strong>, and <strong>agile</strong> practices.</p>
+          <p className="bio">Hello! I'm <span className="name-accent">Samy</span>, a <strong>Software Engineer</strong> working on <strong>full-stack development</strong>, <strong>microservices</strong>, and <strong>IoT systems</strong>. I build scalable backends with <strong>FastAPI</strong>, <strong>Spring Boot</strong>, and <strong>Go</strong>, and craft frontends with <strong>Angular</strong> and <strong>React.js</strong>. Right now I'm learning <strong>Data &amp; AI</strong> on top of a solid base in <strong>cloud</strong>, <strong>DevOps</strong>, and <strong>agile</strong> practices.</p>
 
           <h2 className="section-title">Recent posts</h2>
           <ul className="post-list">
