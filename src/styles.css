@@ -437,6 +437,68 @@ nav a.active {
   color: var(--link);
 }
 
+/* ── RESUME DOWNLOAD ── */
+.resume-nav {
+  display: flex;
+  align-items: center;
+}
+
+.resume-nav a {
+  margin-right: 0;
+}
+
+.resume-nav-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.resume-nav-view {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  opacity: 0;
+  overflow: hidden;
+  margin: 0 12px 0 8px;
+  text-decoration: none;
+  transition: opacity 0.15s ease-out;
+}
+
+.resume-nav-view .icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-nav-view .icon > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.resume-nav:hover .resume-nav-view,
+.resume-nav:focus-within .resume-nav-view {
+  opacity: 1;
+}
+
+.resume-nav-view:hover {
+  text-decoration: none;
+  color: var(--link);
+}
+
+.resume-nav-view:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-nav-view {
+    transition: none;
+  }
+}
+
 /* ── RECENT POSTS ── */
 h2.section-title {
   font-family: var(--font-body);
