@@ -1,42 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { contactLinks } from '../data/site.js'
 import photoUrl from '../assets/IMG_20241003_205041_669_w.jpg'
 
-function holderFromHref(href) {
-  if (href.startsWith('mailto:')) return href.slice(7)
-  const m = href.match(
-    /(?:linkedin\.com\/in\/|github\.com\/|leetcode\.com\/u\/|codeforces\.com\/profile\/|codechef\.com\/users\/|kaggle\.com\/)([^/?#]+)/,
-  )
-  return m ? m[1] : null
-}
-
 function ContactLink({ link }) {
-  const [display, setDisplay] = useState(link.label)
-  const [opacity, setOpacity] = useState(1)
-  const timer = useRef(null)
-  const holder = holderFromHref(link.href)
-
-  useEffect(() => () => clearTimeout(timer.current), [])
-
-  const fadeSwap = text => {
-    clearTimeout(timer.current)
-    setOpacity(0)
-    timer.current = setTimeout(() => {
-      setDisplay(text)
-      requestAnimationFrame(() => setOpacity(1))
-    }, 100)
-  }
-
   return (
     <li>
-      <a
-        href={link.href}
-        {...(link.href.startsWith('mailto:') ? {} : { target: '_blank' })}
-        onMouseEnter={() => holder && fadeSwap(holder)}
-        onMouseLeave={() => holder && fadeSwap(link.label)}
-      >
+      <a href={link.href} {...(link.href.startsWith('mailto:') ? {} : { target: '_blank' })}>
         <span className="icon" dangerouslySetInnerHTML={{ __html: link.icon }} />
-        <span className="link-label" style={{ opacity }}>{display}</span>
+        <span className="link-label">{link.label}</span>
       </a>
     </li>
   )

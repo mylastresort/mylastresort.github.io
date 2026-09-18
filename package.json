@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "resume": "pdflatex -output-directory=public -interaction=nonstopmode -halt-on-error resume/resume.tex && pdflatex -output-directory=public -interaction=nonstopmode -halt-on-error resume/resume.tex && rm -f public/resume.aux public/resume.log public/resume.out"
+    "resume": "mkdir -p public && pdflatex -halt-on-error -interaction=nonstopmode -output-directory=public resume/resume.tex && pdflatex -halt-on-error -interaction=nonstopmode -output-directory=public resume/resume.tex && rm -f public/resume.aux public/resume.log public/resume.out public/resume.synctex.gz && echo 'resume.pdf rebuilt -> public/resume.pdf'"
   },
   "dependencies": {
     "react": "^18.3.1",
