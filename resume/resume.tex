@@ -6,15 +6,30 @@
 
 % ── Packages ─────────────────────────────────────────────────────────────────
 \usepackage[top=0.50in, bottom=0.50in, left=0.60in, right=0.60in]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[expansion=false]{microtype}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{array}
 \usepackage{tabularx}
+
+% ── Fonts (semibold via LuaLaTeX/XeLaTeX, fallback for pdflatex) ─────────────
+\newif\ifluafonts
+\ifdefined\XeTeXrevision\luafontstrue\fi
+\ifdefined\directlua\luafontstrue\fi
+
+\ifluafonts
+  \usepackage{fontspec}
+  \usepackage[expansion=false]{microtype}
+  \setmainfont{Lato}[Ligatures=TeX]
+  \newfontfamily\semiboldfont{Lato Semibold}
+  \newcommand{\skill}[1]{{\semiboldfont #1}}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[expansion=false]{microtype}
+  \newcommand{\skill}[1]{\textbf{#1}}
+\fi
 
 % ── Colours ──────────────────────────────────────────────────────────────────
 \definecolor{accent}{HTML}{1A1A2E}
@@ -27,15 +42,15 @@
 \titleformat{\section}
   {\normalsize\bfseries\color{accent}}
   {}{0em}{}
-  [\vspace{-0.45em}\rule{\linewidth}{0.7pt}\vspace{-0.25em}]
+  [\vspace{-0.45em}\rule{\linewidth}{0.7pt}\vspace{-0.35em}]
 
-\titlespacing{\section}{0pt}{0.55em}{0.25em}
+\titlespacing{\section}{0pt}{1.05em}{0.2em}
 
 % ── List styling ─────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin = 1.1em,
-  itemsep    = 0.8pt,
-  topsep     = 1.5pt,
+  itemsep    = 0.5pt,
+  topsep     = 1pt,
   parsep     = 0pt,
   partopsep  = 0pt
 }
@@ -59,15 +74,9 @@
 % ── Header ───────────────────────────────────────────────────────────────────
 \begin{center}
   {\LARGE\bfseries\color{accent} Samy Tamim}\\[2pt]
-  {\small Software Engineer II}\\[3pt]
+  {\small Software Engineer II}\\[4pt]
   \footnotesize
-  +212\,619\,980\,722
-  $\cdot$
-  \href{mailto:samytamim0@gmail.com}{samytamim0@gmail.com}
-  $\cdot$
-  \href{https://linkedin.com/in/samy-tamim}{linkedin.com/in/samy-tamim}
-  $\cdot$
-  \href{https://github.com/mylastresort}{github.com/mylastresort}
+  +212 619 980 722 \enspace\textbullet\enspace \href{mailto:samytamim0@gmail.com}{Email} \enspace\textbullet\enspace \href{https://linkedin.com/in/stamim}{LinkedIn} \enspace\textbullet\enspace \href{https://mylastresort.github.io}{Portfolio} \enspace\textbullet\enspace \href{https://github.com/mylastresort}{GitHub}
 \end{center}
 
 \vspace{0.1em}
@@ -76,48 +85,48 @@
 \section{Experience}
 
 \entry{Software Engineer}{June 2024 – Present}\\
-\subentry{Mohammed VI Polytechnic University (UM6P)}{Rabat, Morocco}
+\subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
 \begin{itemize}
-  \item Architected a digital twin system for IoT monitoring with predictive maintenance capabilities, processing sensor data from industrial equipment through real-time analytics and MQTT integration.
-  \item Participated in Agile development with 2-week sprints, collaborating with 1 backend developer on engineering best practices including code review and TDD.
-  \item Developed FastAPI REST services and Spring Boot microservices with PostgreSQL, implementing OAuth2 authentication and exploring MySQL and MongoDB alternatives for scalable architecture.
-  \item Built Angular dashboards with TypeScript and implemented CI/CD pipelines using Docker and Jenkins, enabling stakeholders to identify maintenance issues proactively.
+  \item Architected a digital twin system for IoT monitoring with predictive maintenance capabilities, processing sensor data from industrial equipment through real-time analytics and \skill{MQTT} integration.
+  \item Participated in \skill{Agile} development with 2-week sprints, collaborating with 1 backend developer on engineering best practices including code review and \skill{TDD}.
+  \item Developed \skill{FastAPI} REST services and \skill{Spring Boot} microservices with \skill{PostgreSQL}, implementing \skill{OAuth2} authentication and exploring \skill{MySQL} and \skill{MongoDB} alternatives for scalable architecture.
+  \item Built \skill{Angular} dashboards with \skill{TypeScript} and implemented \skill{CI/CD} pipelines using \skill{Docker} and \skill{Jenkins}, enabling stakeholders to identify maintenance issues proactively.
 \end{itemize}
 
-\vspace{0.25em}
+\vspace{0.12em}
 
 \entry{Full-Stack Development Intern}{November 2023 – May 2024}\\
-\subentry{Mohammed VI Polytechnic University (UM6P)}{Rabat, Morocco}
+\subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
 \begin{itemize}
-  \item Collaborated with a cross-functional team to develop a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights using Agile methodologies.
-  \item Engineered a Flask REST API backend with MySQL integration, optimising data workflows with Pandas and improving dashboard performance through query optimisation and caching strategies.
-  \item Developed interactive React.js maps with Leaflet.js, implementing responsive design patterns for an intuitive ship-tracking interface.
+  \item Collaborated with a cross-functional team to develop a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights using \skill{Agile} methodologies.
+  \item Engineered a \skill{Flask} REST API backend with \skill{MySQL} integration, optimising data workflows with Pandas and improving dashboard performance through query optimisation and caching strategies.
+  \item Developed interactive \skill{React.js} maps with Leaflet.js, implementing responsive design patterns for an intuitive ship-tracking interface.
 \end{itemize}
 
 % ── Projects ─────────────────────────────────────────────────────────────────
 \section{Projects}
 
-\entry{Real-time Multiplayer Platform}{September 2023}\\
+\entry{\href{https://github.com/mylastresort/ft_transcendence}{Real-time Multiplayer Platform}}{September 2023}\\
 \subentry{TypeScript, NestJS, Next.js, PostgreSQL, WebSockets, Docker}{}
 \begin{itemize}
-  \item Built a monolithic platform with Docker containerisation, implementing event-driven architecture with WebSockets for real-time gameplay features.
-  \item Implemented OAuth2 authentication with 2FA and JWT session management following security best practices.
-  \item Contributed to team development using Agile practices, participating in code reviews and applying design patterns and refactoring techniques.
+  \item Built a monolithic platform with \skill{Docker} containerisation, implementing event-driven architecture with \skill{WebSockets} for real-time gameplay features.
+  \item Implemented \skill{OAuth2} authentication with 2FA and \skill{JWT} session management following security best practices.
+  \item Contributed to team development using \skill{Agile} practices, participating in code reviews and applying design patterns and refactoring techniques.
 \end{itemize}
 
-\vspace{0.25em}
+\vspace{0.12em}
 
-\entry{Video Streaming Platform}{December 2025}\\
+\entry{\href{https://github.com/mylastresort/hypertube}{Video Streaming Platform}}{December 2025}\\
 \subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2}{}
 \begin{itemize}
-  \item Built a scalable Go backend with HLS streaming and optimised cache management for efficient video delivery.
-  \item Designed a PostgreSQL schema with query optimisation and connection pooling for improved data retrieval performance.
-  \item Collaborated with 3 developers in Agile sprints, conducting sprint planning and daily stand-ups for iterative delivery.
+  \item Built a scalable \skill{Go} backend with HLS streaming and optimised cache management for efficient video delivery.
+  \item Designed a \skill{PostgreSQL} schema with query optimisation and connection pooling for improved data retrieval performance.
+  \item Collaborated with 3 developers in \skill{Agile} sprints, conducting sprint planning and daily stand-ups for iterative delivery.
 \end{itemize}
 
-\vspace{0.25em}
+\vspace{0.12em}
 
-\entry{Job Control System}{September 2025}\\
+\entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2025}\\
 \subentry{Go, Async Jobs}{}
 \begin{itemize}
   \item Building a job orchestration system with an internal queue processing 1\,000+ async tasks per minute with 15+ configuration options.
@@ -127,8 +136,8 @@
 % ── Education ─────────────────────────────────────────────────────────────────
 \section{Education}
 
-\entry{1337 Coding School - UM6P}{November 2021 – Present}\\
-\subentry{\href{https://www.credly.com/org/42/badge/rncp-niveau-7-expert-en-architecture-informatique-a}{42 Software Engineering Program} · \href{https://www.credly.com/org/42/badge/42-cursus-advanced-developer-level-18}{Advanced Developer Badge (\textbf{Level 18.98\,/\,21})}}{Khouribga, Morocco}
+\entry{\href{https://1337.ma/en/}{1337 Coding School - UM6P}}{November 2021 – Present}\\
+\subentry{\href{https://www.credly.com/org/42/badge/rncp-niveau-7-expert-en-architecture-informatique-a}{42 Software Engineering Program} · \href{https://www.credly.com/org/42/badge/42-cursus-advanced-developer-level-18}{Advanced Developer (\textbf{Level 18.98\,/\,21})}}{Khouribga, Morocco}
 \begin{itemize}
   \item Pursuing Data \& AI specialisation track while completing peer-learning curriculum in algorithms, web development, and system programming.
 \end{itemize}
@@ -136,7 +145,7 @@
 % ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 
-\renewcommand{\arraystretch}{1.20}
+\renewcommand{\arraystretch}{1.08}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\small}l X @{}}
   Languages          & \small TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
   Frontend           & \small React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
