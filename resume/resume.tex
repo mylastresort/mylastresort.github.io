@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Samy Tamim — Résumé (LaTeX)
+% Compiler: pdflatex / XeLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper]{article}
+
+% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage[top=0.50in, bottom=0.50in, left=0.60in, right=0.60in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[expansion=false]{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+
+% ── Colours ──────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{1A1A2E}
+\definecolor{link}{HTML}{2563EB}
+
+% ── Hyperref ─────────────────────────────────────────────────────────────────
+\hypersetup{colorlinks=true, urlcolor=link, hidelinks}
+
+% ── Section styling ──────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\normalsize\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-0.45em}\rule{\linewidth}{0.7pt}\vspace{-0.25em}]
+
+\titlespacing{\section}{0pt}{0.55em}{0.25em}
+
+% ── List styling ─────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin = 1.1em,
+  itemsep    = 0.8pt,
+  topsep     = 1.5pt,
+  parsep     = 0pt,
+  partopsep  = 0pt
+}
+
+% ── Helper commands ───────────────────────────────────────────────────────────
+\newcommand{\entry}[2]{%
+  \noindent\textbf{#1}\hfill{\small\itshape #2}%
+}
+\newcommand{\subentry}[2]{%
+  \noindent{\small\itshape #1}\hfill{\footnotesize #2}%
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{0pt}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ── Header ───────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries\color{accent} Samy Tamim}\\[2pt]
+  {\small Software Engineer II}\\[3pt]
+  \footnotesize
+  +212\,619\,980\,722
+  $\cdot$
+  \href{mailto:samytamim0@gmail.com}{samytamim0@gmail.com}
+  $\cdot$
+  \href{https://linkedin.com/in/samy-tamim}{linkedin.com/in/samy-tamim}
+  $\cdot$
+  \href{https://github.com/mylastresort}{github.com/mylastresort}
+\end{center}
+
+\vspace{0.1em}
+
+% ── Experience ───────────────────────────────────────────────────────────────
+\section{Experience}
+
+\entry{Software Engineer}{June 2024 – Present}\\
+\subentry{Mohammed VI Polytechnic University (UM6P)}{Rabat, Morocco}
+\begin{itemize}
+  \item Architected a digital twin system for IoT monitoring with predictive maintenance capabilities, processing sensor data from industrial equipment through real-time analytics and MQTT integration.
+  \item Participated in Agile development with 2-week sprints, collaborating with 1 backend developer on engineering best practices including code review and TDD.
+  \item Developed FastAPI REST services and Spring Boot microservices with PostgreSQL, implementing OAuth2 authentication and exploring MySQL and MongoDB alternatives for scalable architecture.
+  \item Built Angular dashboards with TypeScript and implemented CI/CD pipelines using Docker and Jenkins, enabling stakeholders to identify maintenance issues proactively.
+\end{itemize}
+
+\vspace{0.25em}
+
+\entry{Full-Stack Development Intern}{November 2023 – May 2024}\\
+\subentry{Mohammed VI Polytechnic University (UM6P)}{Rabat, Morocco}
+\begin{itemize}
+  \item Collaborated with a cross-functional team to develop a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights using Agile methodologies.
+  \item Engineered a Flask REST API backend with MySQL integration, optimising data workflows with Pandas and improving dashboard performance through query optimisation and caching strategies.
+  \item Developed interactive React.js maps with Leaflet.js, implementing responsive design patterns for an intuitive ship-tracking interface.
+\end{itemize}
+
+% ── Projects ─────────────────────────────────────────────────────────────────
+\section{Projects}
+
+\entry{Real-time Multiplayer Platform}{September 2023}\\
+\subentry{TypeScript, NestJS, Next.js, PostgreSQL, WebSockets, Docker}{}
+\begin{itemize}
+  \item Built a monolithic platform with Docker containerisation, implementing event-driven architecture with WebSockets for real-time gameplay features.
+  \item Implemented OAuth2 authentication with 2FA and JWT session management following security best practices.
+  \item Contributed to team development using Agile practices, participating in code reviews and applying design patterns and refactoring techniques.
+\end{itemize}
+
+\vspace{0.25em}
+
+\entry{Video Streaming Platform}{December 2025}\\
+\subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2}{}
+\begin{itemize}
+  \item Built a scalable Go backend with HLS streaming and optimised cache management for efficient video delivery.
+  \item Designed a PostgreSQL schema with query optimisation and connection pooling for improved data retrieval performance.
+  \item Collaborated with 3 developers in Agile sprints, conducting sprint planning and daily stand-ups for iterative delivery.
+\end{itemize}
+
+\vspace{0.25em}
+
+\entry{Job Control System}{September 2025}\\
+\subentry{Go, Async Jobs}{}
+\begin{itemize}
+  \item Building a job orchestration system with an internal queue processing 1\,000+ async tasks per minute with 15+ configuration options.
+  \item Implementing a worker-pool architecture with graceful shutdown, dead-letter queues, and automatic retry mechanisms.
+\end{itemize}
+
+% ── Education ─────────────────────────────────────────────────────────────────
+\section{Education}
+
+\entry{1337 Coding School – UM6P}{November 2021 – Present}\\
+\subentry{Software Engineering Program · Advanced Developer Badge (Level 18.98\,/\,21)}{Khouribga, Morocco}
+\begin{itemize}
+  \item Pursuing Data \& AI specialisation track while completing peer-learning curriculum in algorithms, web development, and system programming.
+\end{itemize}
+
+% ── Technical Skills ─────────────────────────────────────────────────────────
+\section{Technical Skills}
+
+\renewcommand{\arraystretch}{1.20}
+\begin{tabularx}{\linewidth}{@{} >{\bfseries\small}l X @{}}
+  Languages          & \small TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
+  Frontend           & \small React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
+  Backend            & \small Node.js, NestJS, Flask, FastAPI, Spring Boot, Express.js \\
+  Databases          & \small PostgreSQL, MySQL, MongoDB, Redis, SQL optimisation \\
+  DevOps \& Cloud    & \small Docker, Jenkins, Git, AWS, CI/CD, CircleCI, Travis CI \\
+  Tools \& Practices & \small WebSockets, REST APIs, OAuth2, JWT, MQTT, FFmpeg, Agile/Scrum, TDD \\
+  Security \& Arch.  & \small OWASP Top 10, Microservices, Design Patterns, Test-Driven Development \\
+\end{tabularx}
+
+\end{document}

@@ -27,6 +27,11 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Compile resume PDF from LaTeX
+        run: |
+          docker run --rm -v "$PWD:/workspace" -w /workspace ghcr.io/xu-cheng/texlive-full:latest \
+            latexmk -pdf -interaction=nonstopmode -halt-on-error \
+            -outdir=public -auxdir=/tmp/resume-aux resume/resume.tex
       - name: Build
         run: npm run build
       - name: Upload artifact

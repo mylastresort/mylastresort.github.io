@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "resume": "pdflatex -output-directory=public -interaction=nonstopmode -halt-on-error resume/resume.tex && pdflatex -output-directory=public -interaction=nonstopmode -halt-on-error resume/resume.tex && rm -f public/resume.aux public/resume.log public/resume.out"
   },
   "dependencies": {
     "react": "^18.3.1",
