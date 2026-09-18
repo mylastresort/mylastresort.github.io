@@ -5,7 +5,7 @@
 \documentclass[10pt,a4paper]{article}
 
 % ── Packages ─────────────────────────────────────────────────────────────────
-\usepackage[top=0.50in, bottom=0.50in, left=0.60in, right=0.60in]{geometry}
+\usepackage[top=0.50in, bottom=0.50in, left=0.55in, right=0.55in]{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{enumitem}
@@ -42,15 +42,15 @@
 \titleformat{\section}
   {\normalsize\bfseries\color{accent}}
   {}{0em}{}
-  [\vspace{-0.45em}\rule{\linewidth}{0.7pt}\vspace{-0.35em}]
+  [\vspace{-0.45em}\rule{\linewidth}{0.7pt}\vspace{-0.4em}]
 
-\titlespacing{\section}{0pt}{1.05em}{0.2em}
+\titlespacing{\section}{0pt}{0.55em}{0.12em}
 
 % ── List styling ─────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin = 1.1em,
-  itemsep    = 0.5pt,
-  topsep     = 1pt,
+  itemsep    = 0.1pt,
+  topsep     = 0pt,
   parsep     = 0pt,
   partopsep  = 0pt
 }
@@ -66,7 +66,7 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlength{\baselineskip}{0pt}
+\renewcommand{\baselinestretch}{1.05}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{document}
@@ -74,12 +74,12 @@
 % ── Header ───────────────────────────────────────────────────────────────────
 \begin{center}
   {\LARGE\bfseries\color{accent} Samy Tamim}\\[2pt]
-  {\small Software Engineer II}\\[4pt]
+  {\small Software Engineer II}\\[2pt]
   \footnotesize
   +212 619 980 722 \enspace\textbullet\enspace \href{mailto:samytamim0@gmail.com}{Email} \enspace\textbullet\enspace \href{https://linkedin.com/in/stamim}{LinkedIn} \enspace\textbullet\enspace \href{https://mylastresort.github.io}{Portfolio} \enspace\textbullet\enspace \href{https://github.com/mylastresort}{GitHub}
 \end{center}
 
-\vspace{0.1em}
+
 
 % ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
@@ -137,23 +137,27 @@
 \section{Education}
 
 \entry{\href{https://1337.ma/en/}{1337 Coding School - UM6P}}{November 2021 – Present}\\
-\subentry{\href{https://www.credly.com/org/42/badge/rncp-niveau-7-expert-en-architecture-informatique-a}{42 Software Engineering Program} · \href{https://www.credly.com/org/42/badge/42-cursus-advanced-developer-level-18}{Advanced Developer (\textbf{Level 18.98\,/\,21})}}{Khouribga, Morocco}
+\subentry{\href{https://www.credly.com/org/42/badge/rncp-niveau-7-expert-en-architecture-informatique-a}{\textbf{Master of Engineering (RNCP 7)}} · \href{https://www.credly.com/org/42/badge/42-cursus-advanced-developer-level-18}{\textbf{Advanced Developer · Level 18.98\,/\,21}}}{May 2024 – Present}
 \begin{itemize}
   \item Pursuing Data \& AI specialisation track while completing peer-learning curriculum in algorithms, web development, and system programming.
+\end{itemize}
+\subentry{\href{https://www.credly.com/org/42/badge/42-cursus-developer-level-13}{\textbf{Developer · Level 13.89}}}{November 2021 – May 2024}
+\begin{itemize}
+  \item Earned the 42 Developer Cursus, completing foundational training in C programming, algorithms, and computer systems fundamentals.
 \end{itemize}
 
 % ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 
-\renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\linewidth}{@{} >{\bfseries\small}l X @{}}
-  Languages          & \small TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
-  Frontend           & \small React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
-  Backend            & \small Node.js, NestJS, Flask, FastAPI, Spring Boot, Express.js \\
-  Databases          & \small PostgreSQL, MySQL, MongoDB, Redis, SQL optimisation \\
-  DevOps \& Cloud    & \small Docker, Jenkins, Git, AWS, CI/CD, CircleCI, Travis CI \\
-  Tools \& Practices & \small WebSockets, REST APIs, OAuth2, JWT, MQTT, FFmpeg, Agile/Scrum, TDD \\
-  Security \& Arch.  & \small OWASP Top 10, Microservices, Design Patterns, Test-Driven Development \\
+\renewcommand{\arraystretch}{0.85}
+\begin{tabularx}{\linewidth}{@{} >{\bfseries\footnotesize}l X @{}}
+  Languages          & \small  \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
+  Frontend           & \small  \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
+  Backend            & \small  \footnotesize Node.js, NestJS, Flask, FastAPI, Spring Boot, Express.js \\
+  Databases          & \small  \footnotesize PostgreSQL, MySQL, MongoDB, Redis, SQL optimisation \\
+  DevOps \& Cloud    & \small  \footnotesize Docker, Jenkins, Git, AWS, CI/CD, CircleCI, Travis CI \\
+  Tools \& Practices & \small  \footnotesize WebSockets, REST APIs, OAuth2, JWT, MQTT, FFmpeg, Agile/Scrum, TDD \\
+  Security \& Arch.  & \small  \footnotesize OWASP Top 10, Microservices, Design Patterns, Test-Driven Development \\
 \end{tabularx}
 
 \end{document}
