@@ -1,4 +1,5 @@
 import Sidebar from '../components/Sidebar.jsx'
+import { handleNavClick } from '../utils/navClick.js'
 
 const FORMULA_STYLE = {
   fontFamily: 'monospace',
@@ -17,10 +18,7 @@ export default function ArticleEeg({ onNavigate }) {
             <a
               className="nav-link"
               href="#archive"
-              onClick={e => {
-                e.preventDefault()
-                onNavigate('archive')
-              }}
+              onClick={e => handleNavClick(e, onNavigate, 'archive')}
             >archive</a>
             <span> / </span>Total Perspective Vortex
           </div>

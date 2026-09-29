@@ -585,6 +585,128 @@ h2.section-title {
   text-decoration: underline;
 }
 
+/* ── PROJECT GRID ── */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.project-card {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.project-card a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.project-card:hover {
+  border-color: var(--link);
+  transform: translateY(-2px);
+}
+
+.project-preview {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--tag-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-preview img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-flag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--badge-dark-bg);
+  color: var(--badge-dark-text);
+  padding: 4px 9px;
+  border-radius: 3px;
+}
+
+.project-card.is-teaser .project-preview img {
+  filter: grayscale(0.55);
+  opacity: 0.6;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 12px 14px 14px;
+}
+
+.project-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  font-size: 23px;
+  margin-bottom: 0;
+  text-decoration: none;
+  cursor: inherit;
+}
+
+.project-title a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s;
+}
+
+.project-title a:hover {
+  text-decoration-color: var(--link);
+}
+
+.project-arrow {
+  display: inline-block;
+  font-weight: 900;
+  color: var(--link);
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.project-title a:hover + .project-arrow,
+.project-card:hover .project-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-card.is-teaser .project-title {
+  color: var(--muted);
+}
+
+.project-desc {
+  margin: 6px 0 0;
+  font-size: 16px;
+  color: var(--text);
+  flex: 1;
+}
+
 /* ── ARTICLE ── */
 .article-title {
   font-family: var(--font-body);

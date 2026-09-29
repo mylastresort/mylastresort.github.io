@@ -1,5 +1,6 @@
 import Sidebar from '../components/Sidebar.jsx'
 import { recentPosts } from '../data/site.js'
+import { handleNavClick } from '../utils/navClick.js'
 
 export default function Archive({ onNavigate }) {
   return (
@@ -17,10 +18,7 @@ export default function Archive({ onNavigate }) {
                   <a
                     className="nav-link"
                     href={'#' + post.id}
-                    onClick={e => {
-                      e.preventDefault()
-                      onNavigate(post.id)
-                    }}
+                    onClick={e => handleNavClick(e, onNavigate, post.id)}
                   >
                     {post.title}
                   </a>
