@@ -3,9 +3,9 @@ import { handleNavClick } from '../utils/navClick.js'
 
 const FORMULA_STYLE = {
   fontFamily: 'monospace',
-  padding: '0.5rem 1rem',
+  padding: '0.6rem 1.25rem',
   background: 'var(--surface2)',
-  borderRadius: '4px',
+  borderRadius: '5px',
 }
 
 export default function ArticleEeg({ onNavigate }) {
