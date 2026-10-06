@@ -5,7 +5,7 @@ import photoUrl from '../assets/IMG_20241003_205041_669_w.jpg'
 function ContactLink({ link }) {
   return (
     <li>
-      <a href={link.href} {...(link.href.startsWith('mailto:') ? {} : { target: '_blank' })}>
+      <a href={link.href} aria-label={link.label} {...(link.href.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}>
         <span className="icon" dangerouslySetInnerHTML={{ __html: link.icon }} />
         <span className="link-label">{link.label}</span>
       </a>
