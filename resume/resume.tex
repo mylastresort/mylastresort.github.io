@@ -42,25 +42,25 @@
 \titleformat{\section}
   {\normalsize\bfseries\color{accent}}
   {}{0em}{}
-  [\vspace{-0.45em}\rule{\linewidth}{0.7pt}\vspace{-0.4em}]
+  [\vspace{-0.38em}\rule{\linewidth}{0.7pt}\vspace{-0.33em}]
 
-\titlespacing{\section}{0pt}{0.55em}{0.12em}
+\titlespacing{\section}{0pt}{0.7em}{0.25em}
 
 % ── List styling ─────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin = 1.1em,
-  itemsep    = 0.1pt,
-  topsep     = 0pt,
+  itemsep    = 0.7pt,
+  topsep     = 1.2pt,
   parsep     = 0pt,
   partopsep  = 0pt
 }
 
 % ── Helper commands ───────────────────────────────────────────────────────────
 \newcommand{\entry}[2]{%
-  \noindent\textbf{#1}\hfill{\small\itshape #2}%
+  \noindent\textbf{#1}\hfill{\small\itshape #2}\vspace{0.07em}%
 }
 \newcommand{\subentry}[2]{%
-  \noindent{\small\itshape #1}\hfill{\footnotesize #2}%
+  \noindent{\small\itshape #1}\hfill{\footnotesize #2}\vspace{0.07em}%
 }
 
 \pagestyle{empty}
@@ -93,7 +93,7 @@
   \item Built \skill{Angular} dashboards with \skill{TypeScript} and implemented \skill{CI/CD} pipelines using \skill{Docker} and \skill{Jenkins}, enabling stakeholders to identify maintenance issues proactively.
 \end{itemize}
 
-\vspace{0.12em}
+\vspace{0.18em}
 
 \entry{Full-Stack Development Intern}{November 2023 – May 2024}\\
 \subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
@@ -114,7 +114,7 @@
   \item Contributed to team development using \skill{Agile} practices, participating in code reviews and applying design patterns and refactoring techniques.
 \end{itemize}
 
-\vspace{0.12em}
+\vspace{0.18em}
 
 \entry{\href{https://github.com/mylastresort/hypertube}{Video Streaming Platform}}{December 2025}\\
 \subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2}{}
@@ -124,7 +124,7 @@
   \item Collaborated with 3 developers in \skill{Agile} sprints, conducting sprint planning and daily stand-ups for iterative delivery.
 \end{itemize}
 
-\vspace{0.12em}
+\vspace{0.18em}
 
 \entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2025}\\
 \subentry{Go, Async Jobs}{}
@@ -137,19 +137,15 @@
 \section{Education}
 
 \entry{\href{https://1337.ma/en/}{1337 Coding School - UM6P}}{November 2021 – Present}\\
-\subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{\textbf{Master of Engineering (RNCP 7)}} · \href{https://www.credly.com/org/42/badge/42-cursus-advanced-developer-level-18}{\textbf{Advanced Developer · Level 18.98\,/\,21}}}{May 2024 – Present}
+\subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{\textbf{Master of Engineering (RNCP 7)}} · \href{https://www.credly.com/org/42/badge/42-cursus-computer-scientist-level-20}{\textbf{Computer Scientist · Level 20.46\,/\,21}}}{}
 \begin{itemize}
   \item Pursuing Data \& AI specialisation track while completing peer-learning curriculum in algorithms, web development, and system programming.
-\end{itemize}
-\subentry{\href{https://www.credly.com/org/42/badge/42-cursus-developer-level-13}{\textbf{Bachelor of Software Engineering (Equivalent) · Developer · Level 13.89}}}{November 2021 – May 2024}
-\begin{itemize}
-  \item Finished the 42 Developer Cursus, completing foundational training in C programming, algorithms, and computer systems fundamentals.
 \end{itemize}
 
 % ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 
-\renewcommand{\arraystretch}{0.85}
+\renewcommand{\arraystretch}{0.92}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\footnotesize}l X @{}}
   Languages          & \small  \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
   Frontend           & \small  \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
