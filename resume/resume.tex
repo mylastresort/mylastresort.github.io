@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Samy Tamim — Résumé (LaTeX)
+% Samy Tamim — Résumé (LaTeX), senior/ATS version
 % Compiler: pdflatex / XeLaTeX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[10pt,a4paper]{article}
@@ -26,6 +26,7 @@
   \newcommand{\skill}[1]{{\semiboldfont #1}}
 \else
   \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
   \usepackage[utf8]{inputenc}
   \usepackage[expansion=false]{microtype}
   \newcommand{\skill}[1]{\textbf{#1}}
@@ -72,14 +73,18 @@
 \begin{document}
 
 % ── Header ───────────────────────────────────────────────────────────────────
+% Tip: match the headline to the target posting's title (e.g. "Senior Software Engineer")
+% only if you can defend it in an interview.
 \begin{center}
   {\LARGE\bfseries\color{accent} Samy Tamim}\\[2pt]
-  {\small Software Engineer II}\\[2pt]
+  {\small Software Engineer \textbar{} Distributed Systems \& IoT Architecture}\\[2pt]
   \footnotesize
   +212 619 980 722 \enspace\textbullet\enspace \href{mailto:samytamim0@gmail.com}{samytamim0@gmail.com} \enspace\textbullet\enspace \href{https://www.linkedin.com/in/samy-tamim/}{linkedin.com/in/samy-tamim} \enspace\textbullet\enspace \href{https://samytamim.com}{samytamim.com} \enspace\textbullet\enspace \href{https://github.com/mylastresort}{github.com/mylastresort}
 \end{center}
 
-
+% ── Summary ──────────────────────────────────────────────────────────────────
+\section{Professional Summary}
+Software engineer specializing in distributed systems, microservices, and event-driven architecture for IoT and real-time data platforms. Leads architecture and delivery of a digital twin platform with predictive maintenance, with hands-on depth in \skill{Go}, \skill{Java/Spring Boot}, \skill{Python}, and \skill{TypeScript}. Focused on scalability, fault tolerance, security, and engineering practices (code review, TDD, CI/CD).
 
 % ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
@@ -87,10 +92,11 @@
 \entry{Software Engineer}{June 2024 – Present}\\
 \subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
 \begin{itemize}
-  \item Architected a digital twin system for IoT monitoring with predictive maintenance capabilities, processing sensor data from industrial equipment through real-time analytics and \skill{MQTT} integration.
-  \item Participated in \skill{Agile} development with 2-week sprints, collaborating with 1 backend developer on engineering best practices including code review and \skill{TDD}.
-  \item Developed \skill{FastAPI} REST services and \skill{Spring Boot} microservices with \skill{PostgreSQL}, implementing \skill{OAuth2} authentication and exploring \skill{MySQL} and \skill{MongoDB} alternatives for scalable architecture.
-  \item Built \skill{Angular} dashboards with \skill{TypeScript} and implemented \skill{CI/CD} pipelines using \skill{Docker} and \skill{Jenkins}, enabling stakeholders to identify maintenance issues proactively.
+  % TODO: add real scale metrics here (devices, messages/sec, latency, uptime) if you can state them.
+  \item Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial equipment sensor data through \skill{MQTT} with real-time analytics.
+  \item Established engineering practices for the backend team, including code review, \skill{TDD}, and 2-week \skill{Agile} sprints.
+  \item Designed and developed REST APIs and microservices with \skill{FastAPI} and \skill{Spring Boot} on \skill{PostgreSQL}, secured with \skill{OAuth2}; evaluated \skill{PostgreSQL} and \skill{Cassandra} as alternatives for scalability.
+  \item Built \skill{Angular} and \skill{TypeScript} dashboards and \skill{CI/CD} pipelines with \skill{Docker} and \skill{Github Actions}, enabling stakeholders to identify maintenance issues proactively.
 \end{itemize}
 
 \vspace{0.18em}
@@ -98,20 +104,18 @@
 \entry{Full-Stack Development Intern}{November 2023 – May 2024}\\
 \subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
 \begin{itemize}
-  \item Collaborated with a cross-functional team to develop a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights using \skill{Agile} methodologies.
-  \item Engineered a \skill{Flask} REST API backend with \skill{MySQL} integration, optimising data workflows with Pandas and improving dashboard performance through query optimisation and caching strategies.
-  \item Developed interactive \skill{React.js} maps with Leaflet.js, implementing responsive design patterns for an intuitive ship-tracking interface.
+  \item Developed a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights in a cross-functional \skill{Agile} team, with interactive \skill{React.js} and Leaflet.js maps.
+  \item Engineered a \skill{Flask} REST API with \skill{MySQL}, improving dashboard performance through query optimization and caching strategies.
 \end{itemize}
 
 % ── Projects ─────────────────────────────────────────────────────────────────
 \section{Projects}
 
-\entry{\href{https://github.com/mylastresort/ft_transcendence}{Real-time Multiplayer Platform}}{September 2023}\\
-\subentry{TypeScript, NestJS, Next.js, PostgreSQL, WebSockets, Docker}{}
+\entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2025}\\
+\subentry{Go, Async Jobs}{}
 \begin{itemize}
-  \item Built a monolithic platform with \skill{Docker} containerisation, implementing event-driven architecture with \skill{WebSockets} for real-time gameplay features.
-  \item Implemented \skill{OAuth2} authentication with 2FA and \skill{JWT} session management following security best practices.
-  \item Contributed to team development using \skill{Agile} practices, participating in code reviews and applying design patterns and refactoring techniques.
+  \item Designing and building a job orchestration system with an internal queue processing 1\,000+ async tasks per minute with 15+ configuration options.
+  \item Implementing a worker-pool architecture with graceful shutdown, dead-letter queues, and automatic retry mechanisms for fault tolerance.
 \end{itemize}
 
 \vspace{0.18em}
@@ -119,18 +123,9 @@
 \entry{\href{https://github.com/mylastresort/hypertube}{Video Streaming Platform}}{December 2025}\\
 \subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2}{}
 \begin{itemize}
-  \item Built a scalable \skill{Go} backend with HLS streaming and optimised cache management for efficient video delivery.
-  \item Designed a \skill{PostgreSQL} schema with query optimisation and connection pooling for improved data retrieval performance.
-  \item Collaborated with 3 developers in \skill{Agile} sprints, conducting sprint planning and daily stand-ups for iterative delivery.
-\end{itemize}
-
-\vspace{0.18em}
-
-\entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2025}\\
-\subentry{Go, Async Jobs}{}
-\begin{itemize}
-  \item Building a job orchestration system with an internal queue processing 1\,000+ async tasks per minute with 15+ configuration options.
-  \item Implementing a worker-pool architecture with graceful shutdown, dead-letter queues, and automatic retry mechanisms.
+  \item Built a scalable \skill{Go} backend with HLS streaming and optimized cache management for efficient video delivery.
+  \item Designed a \skill{PostgreSQL} schema with query optimization and connection pooling for improved data retrieval performance.
+  \item Drove \skill{Agile} delivery with 3 developers through sprint planning and daily stand-ups.
 \end{itemize}
 
 % ── Education ─────────────────────────────────────────────────────────────────
@@ -139,7 +134,7 @@
 \entry{\href{https://1337.ma/en/}{1337 Coding School - UM6P}}{November 2021 – Present}\\
 \subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{\textbf{Master of Engineering (RNCP 7)}} · \href{https://www.credly.com/org/42/badge/42-cursus-computer-scientist-level-20}{\textbf{Computer Scientist · Level 20.46\,/\,21}}}{}
 \begin{itemize}
-  \item Pursuing Data \& AI specialisation track while completing peer-learning curriculum in algorithms, web development, and system programming.
+  \item Pursuing Data \& AI specialization track while completing peer-learning curriculum in algorithms, web development, and system programming.
 \end{itemize}
 
 % ── Technical Skills ─────────────────────────────────────────────────────────
@@ -147,13 +142,14 @@
 
 \renewcommand{\arraystretch}{0.92}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\footnotesize}l X @{}}
-  Languages          & \small  \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
-  Frontend           & \small  \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
-  Backend            & \small  \footnotesize Node.js, NestJS, Flask, FastAPI, Spring Boot, Express.js \\
-  Databases          & \small  \footnotesize PostgreSQL, MySQL, MongoDB, Redis, SQL optimisation \\
-  DevOps \& Cloud    & \small  \footnotesize Docker, Jenkins, Git, AWS, CI/CD, CircleCI, Travis CI \\
-  Tools \& Practices & \small  \footnotesize WebSockets, REST APIs, OAuth2, JWT, MQTT, FFmpeg, Agile/Scrum, TDD \\
-  Security \& Arch.  & \small  \footnotesize OWASP Top 10, Microservices, Design Patterns, Test-Driven Development \\
+  Languages            & \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
+  Frontend             & \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
+  Backend              & \footnotesize Node.js, NestJS, Flask, FastAPI, Spring Boot, REST APIs, Microservices \\
+  Databases            & \footnotesize PostgreSQL, MySQL, MongoDB, Redis, SQL Optimization, Caching \\
+  DevOps \& Cloud      & \footnotesize Docker, GitHub Actions, Git, AWS, CI/CD (Continuous Integration/Continuous Delivery) \\
+  Architecture         & \footnotesize Distributed Systems, System Design, Event-Driven Architecture, Microservices, Design Patterns, Scalability, Fault Tolerance \\
+  IoT \& Real-Time     & \footnotesize MQTT, WebSockets, Digital Twins, Real-Time Data Processing, FFmpeg \\
+  Security \& Practices & \footnotesize OAuth2, JWT, OWASP Top 10, Test-Driven Development (TDD), Agile/Scrum, Code Review \\
 \end{tabularx}
 
 \end{document}
