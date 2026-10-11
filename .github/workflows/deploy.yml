@@ -30,8 +30,7 @@ jobs:
       - name: Compile resume PDF from LaTeX
         run: |
           docker run --rm -v "$PWD:/workspace" -w /workspace ghcr.io/xu-cheng/texlive-full:latest \
-            latexmk -pdf -interaction=nonstopmode -halt-on-error \
-            -outdir=public -auxdir=/tmp/resume-aux resume/resume.tex
+            sh -eu -c "kpsewhich carlito.sty && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=public -auxdir=/tmp/resume-aux resume/resume.tex && LOG=\$(cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null) && echo \"\$LOG\" | grep -q 'T1Crlt-LF' && ! echo \"\$LOG\" | grep -qi 'falling back' && echo \"\$LOG\" | grep -q 'Crlt-.*\.pfb' && test -s public/resume.pdf && echo 'resume: Carlito lining figures verified'"
       - name: Build
         run: npm run build
       - name: Upload artifact

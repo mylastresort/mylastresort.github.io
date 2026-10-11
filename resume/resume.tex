@@ -13,7 +13,7 @@
 \usepackage{array}
 \usepackage{tabularx}
 
-% ── Fonts (semibold via LuaLaTeX/XeLaTeX, fallback for pdflatex) ─────────────
+% ── Fonts (Carlito, metric-compatible with Calibri) ────────────────────────────
 \newif\ifluafonts
 \ifdefined\XeTeXrevision\luafontstrue\fi
 \ifdefined\directlua\luafontstrue\fi
@@ -21,13 +21,19 @@
 \ifluafonts
   \usepackage{fontspec}
   \usepackage[expansion=false]{microtype}
-  \setmainfont{Lato}[Ligatures=TeX]
-  \newfontfamily\semiboldfont{Lato Semibold}
-  \newcommand{\skill}[1]{{\semiboldfont #1}}
+  \IfFontExistsTF{Carlito}
+    {\setmainfont{Carlito}[Ligatures=TeX, Numbers=Lining, BoldFont={Carlito Bold}]}
+    {\setmainfont{Latin Modern Roman}[Ligatures=TeX]%
+     \PackageWarning{resume}{Carlito system font not found - falling back. Install fonts-crosextra-carlito for Carlito}}
+  \newcommand{\skill}[1]{\textbf{#1}}
 \else
   \usepackage[T1]{fontenc}
-  \usepackage{lmodern}
   \usepackage[utf8]{inputenc}
+  \IfFileExists{carlito.sty}
+    {\usepackage[lining]{carlito}%
+     \renewcommand{\familydefault}{\sfdefault}}
+    {\usepackage{lmodern}%
+     \PackageWarning{resume}{carlito.sty not found - falling back to lmodern. Install texlive-fonts-extra for Carlito}}
   \usepackage[expansion=false]{microtype}
   \newcommand{\skill}[1]{\textbf{#1}}
 \fi
@@ -84,7 +90,7 @@
 
 % ── Summary ──────────────────────────────────────────────────────────────────
 \section{Professional Summary}
-Software engineer specializing in distributed systems, microservices, and event-driven architecture for IoT and real-time data platforms. Leads architecture and delivery of a digital twin platform with predictive maintenance, with hands-on depth in \skill{Go}, \skill{Java/Spring Boot}, \skill{Python}, and \skill{TypeScript}. Focused on scalability, fault tolerance, security, and engineering practices (code review, TDD, CI/CD).
+Software engineer specializing in distributed systems, microservices, and event-driven architecture for IoT and real-time data platforms, including LLM-based agents. Leads architecture and delivery of a digital twin platform with predictive maintenance, with hands-on depth in \skill{Go}, \skill{Java/Spring Boot}, \skill{Python}, and \skill{TypeScript}. Focusing on scalability, fault tolerance, security, and engineering practices (code review, TDD, CI/CD).
 
 % ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
@@ -94,8 +100,8 @@ Software engineer specializing in distributed systems, microservices, and event-
 \begin{itemize}
   % TODO: add real scale metrics here (devices, messages/sec, latency, uptime) if you can state them.
   \item Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial equipment sensor data through \skill{MQTT} with real-time analytics.
-  \item Established engineering practices for the backend team, including code review, \skill{TDD}, and 2-week \skill{Agile} sprints.
-  \item Designed and developed REST APIs and microservices with \skill{FastAPI} and \skill{Spring Boot} on \skill{PostgreSQL}, secured with \skill{OAuth2}; evaluated \skill{PostgreSQL} and \skill{Cassandra} as alternatives for scalability.
+  \item Built a multi-agent IoT operations assistant on \skill{Google ADK}: specialist sub-agents (assets, devices, telemetry, anomaly detection) in an agent-as-tool pattern, local \skill{Ollama} models via a native adapter for reliable tool calls, and $\sim$98 ThingsBoard tools exposed through \skill{MCP} with guardrails against hallucination; evaluated models and agent behavior with trajectory-based benchmarks.
+  \item Designed and developed REST APIs and microservices with \skill{FastAPI} and \skill{Spring Boot} on \skill{PostgreSQL}; evaluated \skill{PostgreSQL} and \skill{Cassandra} as alternatives for scalability.
   \item Built \skill{Angular} and \skill{TypeScript} dashboards and \skill{CI/CD} pipelines with \skill{Docker} and \skill{Github Actions}, enabling stakeholders to identify maintenance issues proactively.
 \end{itemize}
 
@@ -111,7 +117,7 @@ Software engineer specializing in distributed systems, microservices, and event-
 % ── Projects ─────────────────────────────────────────────────────────────────
 \section{Projects}
 
-\entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2025}\\
+\entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2026}\\
 \subentry{Go, Async Jobs}{}
 \begin{itemize}
   \item Designing and building a job orchestration system with an internal queue processing 1\,000+ async tasks per minute with 15+ configuration options.
@@ -143,11 +149,12 @@ Software engineer specializing in distributed systems, microservices, and event-
 \renewcommand{\arraystretch}{0.92}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\footnotesize}l X @{}}
   Languages            & \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
-  Frontend             & \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS \\
+  Frontend             & \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS, Leaflet.js \\
   Backend              & \footnotesize Node.js, NestJS, Flask, FastAPI, Spring Boot, REST APIs, Microservices \\
   Databases            & \footnotesize PostgreSQL, MySQL, MongoDB, Redis, SQL Optimization, Caching \\
   DevOps \& Cloud      & \footnotesize Docker, GitHub Actions, Git, AWS, CI/CD (Continuous Integration/Continuous Delivery) \\
   Architecture         & \footnotesize Distributed Systems, System Design, Event-Driven Architecture, Microservices, Design Patterns, Scalability, Fault Tolerance \\
+  AI \& Agents         & \footnotesize Google ADK, MCP, Multi-Agent Systems, Ollama (Local LLMs), Tool Calling, Prompt Engineering, LLM Evaluation \\
   IoT \& Real-Time     & \footnotesize MQTT, WebSockets, Digital Twins, Real-Time Data Processing, FFmpeg \\
   Security \& Practices & \footnotesize OAuth2, JWT, OWASP Top 10, Test-Driven Development (TDD), Agile/Scrum, Code Review \\
 \end{tabularx}
