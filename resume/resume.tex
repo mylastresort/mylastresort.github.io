@@ -90,7 +90,7 @@
 
 % ── Summary ──────────────────────────────────────────────────────────────────
 \section{Professional Summary}
-Software engineer specializing in distributed systems, microservices, and event-driven architecture for IoT and real-time data platforms, including LLM-based agents. Leads architecture and delivery of a digital twin platform with predictive maintenance, with hands-on depth in \skill{Go}, \skill{Java/Spring Boot}, \skill{Python}, and \skill{TypeScript}. Focusing on scalability, fault tolerance, security, and engineering practices (code review, TDD, CI/CD).
+Software engineer specializing in distributed systems, microservices, and event-driven architecture for IoT and real-time data platforms, including LLM-based agents. Leads architecture and delivery of a digital twin platform with predictive maintenance, with hands-on depth in \skill{Go}, \skill{Java}, \skill{Python}, and \skill{TypeScript}. Focusing on scalability, fault tolerance, security, and engineering practices (code review, TDD, CI/CD).
 
 % ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
@@ -100,9 +100,9 @@ Software engineer specializing in distributed systems, microservices, and event-
 \begin{itemize}
   % TODO: add real scale metrics here (devices, messages/sec, latency, uptime) if you can state them.
   \item Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial equipment sensor data through \skill{MQTT} with real-time analytics.
-  \item Built a multi-agent IoT operations assistant on \skill{Google ADK}: specialist sub-agents (assets, devices, telemetry, anomaly detection) in an agent-as-tool pattern, local \skill{Ollama} models via a native adapter for reliable tool calls, and $\sim$98 ThingsBoard tools exposed through \skill{MCP} with guardrails against hallucination; evaluated models and agent behavior with trajectory-based benchmarks.
-  \item Designed and developed REST APIs and microservices with \skill{FastAPI} and \skill{Spring Boot} on \skill{PostgreSQL}; evaluated \skill{PostgreSQL} and \skill{Cassandra} as alternatives for scalability.
-  \item Built \skill{Angular} and \skill{TypeScript} dashboards and \skill{CI/CD} pipelines with \skill{Docker} and \skill{Github Actions}, enabling stakeholders to identify maintenance issues proactively.
+  \item Built a multi-agent IoT operations assistant on \skill{Google ADK}: specialist sub-agents (assets and devices finder, telemetry agent, PdM agent) in an agent-as-tool pattern, local \skill{Ollama} models and \skill{LiteLLM} as the proxy intermediare layer for reliable tool calls, streaming, reasoning, and $\sim$98 tools exposed through \skill{MCP} with guardrails against hallucination; evaluated models and agent behavior with trajectory-based benchmarks to find model scores.
+  \item Designed and developed microservices with \skill {Kafka}, \skill{Python} and used \skill{Redis} for caching, resulting into \skill{stateless} python consumers and system.
+  \item Evaluated multiple \skill{SPOF} on the platform to ensure the system remains resilient.
 \end{itemize}
 
 \vspace{0.18em}
@@ -110,7 +110,7 @@ Software engineer specializing in distributed systems, microservices, and event-
 \entry{Full-Stack Development Intern}{November 2023 – May 2024}\\
 \subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
 \begin{itemize}
-  \item Developed a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights in a cross-functional \skill{Agile} team, with interactive \skill{React.js} and Leaflet.js maps.
+  \item Developed a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights, with interactive \skill{React.js} and Leaflet.js maps in a cross-functional \skill{Agile} team.
   \item Engineered a \skill{Flask} REST API with \skill{MySQL}, improving dashboard performance through query optimization and caching strategies.
 \end{itemize}
 
@@ -137,8 +137,8 @@ Software engineer specializing in distributed systems, microservices, and event-
 % ── Education ─────────────────────────────────────────────────────────────────
 \section{Education}
 
-\entry{\href{https://1337.ma/en/}{1337 Coding School - UM6P}}{November 2021 – Present}\\
-\subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{\textbf{Master of Engineering (RNCP 7)}} · \href{https://www.credly.com/org/42/badge/42-cursus-computer-scientist-level-20}{\textbf{Computer Scientist · Level 20.46\,/\,21}}}{}
+\entry{Expert in IT Architecture}{November 2021 – Present}\\
+\noindent{\small\href{https://42.fr/}{42 School}\enspace\textperiodcentered\enspace \href{https://www.francecompetences.fr/recherche/rncp/39774}{RNCP 39774, Level 7 (Master's-level)}\enspace\textperiodcentered\enspace Data Architecture option}
 \begin{itemize}
   \item Pursuing Data \& AI specialization track while completing peer-learning curriculum in algorithms, web development, and system programming.
 \end{itemize}
