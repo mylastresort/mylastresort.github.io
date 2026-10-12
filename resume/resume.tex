@@ -51,13 +51,13 @@
   {}{0em}{}
   [\vspace{-0.38em}\rule{\linewidth}{0.7pt}\vspace{-0.33em}]
 
-\titlespacing{\section}{0pt}{0.7em}{0.25em}
+\titlespacing{\section}{0pt}{0.999em}{0.383em}
 
 % ── List styling ─────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin = 1.1em,
-  itemsep    = 0.7pt,
-  topsep     = 1.2pt,
+  itemsep    = 1.70pt,
+  topsep     = 2.06pt,
   parsep     = 0pt,
   partopsep  = 0pt
 }
@@ -73,7 +73,7 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\renewcommand{\baselinestretch}{1.05}
+\renewcommand{\baselinestretch}{1.083}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{document}
@@ -100,18 +100,18 @@ Software engineer specializing in distributed systems, microservices, and event-
 \begin{itemize}
   % TODO: add real scale metrics here (devices, messages/sec, latency, uptime) if you can state them.
   \item Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial equipment sensor data through \skill{MQTT} with real-time analytics.
-  \item Built a multi-agent IoT operations assistant on \skill{Google ADK}: specialist sub-agents (assets and devices finder, telemetry agent, PdM agent) in an agent-as-tool pattern, local \skill{Ollama} models and \skill{LiteLLM} as the proxy intermediare layer for reliable tool calls, streaming, reasoning, and $\sim$98 tools exposed through \skill{MCP} with guardrails against hallucination; evaluated models and agent behavior with trajectory-based benchmarks to find model scores.
-  \item Designed and developed microservices with \skill {Kafka}, \skill{Python} and used \skill{Redis} for caching, resulting into \skill{stateless} python consumers and system.
+  \item Built a multi-agent IoT operations assistant on \skill{Google ADK}: specialist sub-agents (assets and devices finder, telemetry agent, PdM agent) in an agent-as-tool pattern, local \skill{Ollama} models and \skill{LiteLLM} as the proxy intermediary layer for reliable tool calls, streaming, reasoning, and $\sim$98 tools exposed through \skill{MCP} with guardrails against hallucination; evaluated models and agent behavior with trajectory-based benchmarks to find model scores.
+  \item Built \skill{Kafka} and \skill{Python} microservices with \skill{Redis} caching, keeping consumers and the whole system \skill{stateless}.
   \item Evaluated multiple \skill{SPOF} on the platform to ensure the system remains resilient.
 \end{itemize}
 
-\vspace{0.18em}
+\vspace{0.525em}
 
 \entry{Full-Stack Development Intern}{November 2023 – May 2024}\\
 \subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
 \begin{itemize}
   \item Developed a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights, with interactive \skill{React.js} and Leaflet.js maps in a cross-functional \skill{Agile} team.
-  \item Engineered a \skill{Flask} REST API with \skill{MySQL}, improving dashboard performance through query optimization and caching strategies.
+  \item Engineered a \skill{Flask} REST API with \skill{MySQL}, improving dashboard performance via query optimization and caching.
 \end{itemize}
 
 % ── Projects ─────────────────────────────────────────────────────────────────
@@ -120,11 +120,11 @@ Software engineer specializing in distributed systems, microservices, and event-
 \entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2026}\\
 \subentry{Go, Async Jobs}{}
 \begin{itemize}
-  \item Designing and building a job orchestration system with an internal queue processing 1\,000+ async tasks per minute with 15+ configuration options.
-  \item Implementing a worker-pool architecture with graceful shutdown, dead-letter queues, and automatic retry mechanisms for fault tolerance.
+  \item Building a job orchestration system with an internal queue handling 1\,000+ async tasks/min and 15+ config options.
+  \item Implementing a worker pool with graceful shutdown, dead-letter queues, and automatic retries for fault tolerance.
 \end{itemize}
 
-\vspace{0.18em}
+\vspace{0.525em}
 
 \entry{\href{https://github.com/mylastresort/hypertube}{Video Streaming Platform}}{December 2025}\\
 \subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2}{}
@@ -140,13 +140,13 @@ Software engineer specializing in distributed systems, microservices, and event-
 \entry{Expert in IT Architecture}{November 2021 – Present}\\
 \noindent{\small\href{https://42.fr/}{42 School}\enspace\textperiodcentered\enspace \href{https://www.francecompetences.fr/recherche/rncp/39774}{RNCP 39774, Level 7 (Master's-level)}\enspace\textperiodcentered\enspace Data Architecture option}
 \begin{itemize}
-  \item Pursuing Data \& AI specialization track while completing peer-learning curriculum in algorithms, web development, and system programming.
+  \item Pursuing Data \& AI specialization while completing peer-learning curriculum in algorithms, web, and system programming.
 \end{itemize}
 
 % ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 
-\renewcommand{\arraystretch}{0.92}
+\renewcommand{\arraystretch}{1.073}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\footnotesize}l X @{}}
   Languages            & \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
   Frontend             & \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS, Leaflet.js \\
