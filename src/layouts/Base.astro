@@ -58,6 +58,20 @@ const ogImageUrl = new URL(ogImage, SITE).href
       document.documentElement.dataset.theme = theme;
     })();
   </script>
+  <!-- The site used to be hash-routed, so older inbound links point at
+       /#projects and friends. Forward them to the real routes. -->
+  <script is:inline>
+    (function () {
+      var routes = {
+        '#home': '/',
+        '#projects': '/projects/',
+        '#archive': '/archive/',
+        '#article-eeg': '/article-eeg/',
+      };
+      var target = routes[window.location.hash];
+      if (target) window.location.replace(target + window.location.search);
+    })();
+  </script>
 </head>
 
 <body>
