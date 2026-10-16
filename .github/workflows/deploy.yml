@@ -23,11 +23,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # Astro 7 requires node >= 22.22.0 (Vite/Rolldown alone would accept 20.19).
+          node-version: 22
           cache: npm
       - name: Install dependencies
         run: npm ci
       - name: Compile resume PDF from LaTeX
+        # Writes public/resume.pdf. This must precede the build: Astro copies
+        # public/ into dist at build time, so a later compile would not ship.
         run: |
           docker run --rm -v "$PWD:/workspace" -w /workspace ghcr.io/xu-cheng/texlive-full:latest \
             sh -eu -c "kpsewhich carlito.sty && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=public -auxdir=/tmp/resume-aux resume/resume.tex && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'T1Crlt-LF' && ! cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -qi 'falling back' && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'Crlt-.*\.pfb' && test -s public/resume.pdf && echo 'resume: Carlito lining figures verified'"
