@@ -18,13 +18,16 @@ const RESUME_LABEL = 'resume (PDF, 104 KB)'
 const VIEW_ICON =
   '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
 
-// Both icons are rendered and swapped with the `hidden` attribute by the
-// script below, so the correct one is shown on the first frame.
+// Both icons are rendered as direct children of the button and swapped by the
+// script below. Two constraints, both load-bearing:
+//   1. They must stay direct children — wrapping them changes the button's line
+//      box and shifts the glyph ~1px.
+//   2. Hide with inline `display`, not the `hidden` attribute — the UA's
+//      `[hidden] { display: none }` rule does not apply to SVG-namespaced elements.
 const SUN_ICON =
-  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+  '<svg class="icon-sun" style="display:none" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
 
-const MOON_ICON =
-  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
+const MOON_ICON = '<svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
 ---
 
 <nav>
@@ -49,10 +52,12 @@ const MOON_ICON =
         title="View resume as PDF"
       ><span class="icon" set:html={VIEW_ICON}></span></a>
     </span>
-    <button id="theme-toggle" aria-label="Toggle dark mode" title="Switch to dark mode">
-      <span class="icon-sun" hidden set:html={SUN_ICON}></span>
-      <span class="icon-moon" set:html={MOON_ICON}></span>
-    </button>
+    <button
+      id="theme-toggle"
+      aria-label="Toggle dark mode"
+      title="Switch to dark mode"
+      set:html={SUN_ICON + MOON_ICON}
+    ></button>
   </div>
 </nav>
 
@@ -67,8 +72,8 @@ const MOON_ICON =
 
     function sync() {
       var dark = document.documentElement.dataset.theme === 'dark';
-      sun.hidden = !dark;
-      moon.hidden = dark;
+      sun.style.display = dark ? '' : 'none';
+      moon.style.display = dark ? 'none' : '';
       btn.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
     }
 
