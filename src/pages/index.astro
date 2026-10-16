@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Sidebar from '../components/Sidebar.astro'
+import { recentPosts } from '../data/site.js'
+---
+
+<Base
+  title="Samy Tamim - Portfolio"
+  description="Portfolio of Samy Tamim, software engineer. Systems programming, applied ML, and things that run fast."
+  path="/"
+>
+  <Nav />
+  <div class="page-wrap active">
+    <div class="page-inner">
+      <div class="content-area">
+        <div class="breadcrumb"><span>~ / </span>home</div>
+        <div class="badges">
+          <span class="badge"><span class="badge-label">stack</span><span class="badge-value accent">Python · TypeScript · Rust</span></span>
+        </div>
+        <p class="tagline">🛠 Systems programming, applied ML, and things that run fast. Based in Rabat, Morocco.</p>
+
+        <h2 class="section-title">Overview</h2>
+        <p class="bio">Hello! I'm <span class="name-accent">Samy Tamim</span>, a <strong>Software Engineer</strong> working on <strong>full-stack development</strong>, <strong>microservices</strong>, and <strong>IoT systems</strong>. I build scalable backends with <strong>FastAPI</strong>, <strong>Spring Boot</strong>, and <strong>Go</strong>, and craft frontends with <strong>Angular</strong> and <strong>React.js</strong>. Right now I'm learning <strong>Data &amp; AI</strong> on top of a solid base in <strong>cloud</strong>, <strong>DevOps</strong>, and <strong>agile</strong> practices.</p>
+
+        <h2 class="section-title">Recent posts</h2>
+        <ul class="post-list">
+          {recentPosts.map((post) => (
+            <li>
+              <a class="nav-link" href={'/' + post.id + '/'}>{post.title}</a>
+              <div class="post-meta">
+                <span>📅</span> {post.date}
+                <span>—</span>
+                <span>👤</span> {post.author}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Sidebar />
+    </div>
+  </div>
+</Base>

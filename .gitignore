@@ -3,6 +3,7 @@ node_modules
 
 # build output
 dist
+.astro
 
 # generated resume PDF (built from resume.tex in CI)
 public/resume.pdf
