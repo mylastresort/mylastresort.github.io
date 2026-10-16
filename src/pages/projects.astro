@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Sidebar from '../components/Sidebar.astro'
+import { projects } from '../data/projects.js'
+---
+
+<Base
+  title="Projects - Samy Tamim"
+  description="Things Samy Tamim has built: Gomoku, an AI opponent for five-in-a-row, and Music Room, a shared listening room."
+  path="/projects/"
+>
+  <Nav />
+  <div class="page-wrap active">
+    <div class="page-inner">
+      <div class="content-area">
+        <div class="breadcrumb"><span>~ / </span>projects</div>
+
+        <div class="project-grid">
+          {projects.map((project) => (
+            <article class={'project-card' + (project.status !== 'live' ? ' is-teaser' : '')}>
+              <div class="project-preview">
+                <img
+                  src={project.preview}
+                  alt={project.title + ' preview'}
+                  loading="lazy"
+                  width="16"
+                  height="10"
+                />
+                {project.status !== 'live' && <span class="project-flag">coming soon</span>}
+              </div>
+
+              <div class="project-body">
+                <h3 class="project-title">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</a>
+                  <span class="project-arrow" aria-hidden="true">→</span>
+                </h3>
+                <p class="project-desc">{project.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+      <Sidebar />
+    </div>
+  </div>
+</Base>
