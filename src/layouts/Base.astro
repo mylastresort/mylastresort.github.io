@@ -50,7 +50,8 @@ const ogImageUrl = new URL(ogImage, SITE).href
        avoid a flash of the wrong theme. -->
   <script is:inline>
     (function () {
-      var saved = localStorage.getItem('theme');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* private mode */ }
       var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
       var theme = saved === 'dark' || saved === 'light'
         ? saved
