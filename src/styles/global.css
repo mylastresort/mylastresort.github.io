@@ -190,6 +190,21 @@ nav a.active {
   border-right: 1px solid var(--border);
 }
 
+/* ── HERO ── */
+/* Cover banner at the top of the homepage. Doubles as the page's prominent
+   image — search engines pick images from visible page content, not just
+   og:image metadata. Height is capped so it stays a banner, not a poster. */
+.hero-cover {
+  display: block;
+  width: 100%;
+  max-height: clamp(11rem, 30vh, 21rem);
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--border);
+  border-radius: 0.5625rem;
+  margin-bottom: clamp(1.25rem, 4vh, 2.5rem);
+}
+
 /* ── SIDEBAR ── */
 .sidebar {
   width: var(--sidebar-w);

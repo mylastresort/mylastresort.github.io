@@ -1,8 +1,10 @@
 ---
 import '../styles/global.css'
+import { contactLinks } from '../data/site.js'
 
 const SITE = 'https://samytamim.com'
-const DEFAULT_TITLE = 'Samy Tamim - Portfolio'
+const SITE_NAME = 'Samy Tamim'
+const DEFAULT_TITLE = SITE_NAME
 const DEFAULT_DESCRIPTION = 'Portfolio of Samy Tamim, software engineer.'
 
 // Per-page metadata. `path` is the canonical route for this document.
@@ -15,6 +17,54 @@ const {
 
 const canonical = new URL(path, SITE).href
 const ogImageUrl = new URL(ogImage, SITE).href
+
+// JSON-LD structured data. `primaryImageOfPage` tells Google which image
+// represents the page (used by Discover / image-forward results), and the
+// Person/WebSite graph lets it associate the site and its photo with the
+// author. `sameAs` comes from the profile links in the sidebar.
+const sameAs = contactLinks.map((link) => link.href)
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE}/#website`,
+      url: SITE,
+      name: SITE_NAME,
+      inLanguage: 'en',
+      publisher: { '@id': `${SITE}/#person` },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${SITE}/#person`,
+      name: SITE_NAME,
+      url: SITE,
+      image: ogImageUrl,
+      jobTitle: 'Software Engineer',
+      sameAs,
+    },
+    {
+      '@type': 'WebPage',
+      '@id': canonical,
+      url: canonical,
+      name: title,
+      isPartOf: { '@id': `${SITE}/#website` },
+      primaryImageOfPage: { '@id': `${ogImageUrl}#image` },
+      image: { '@id': `${ogImageUrl}#image` },
+      description,
+      inLanguage: 'en',
+    },
+    {
+      '@type': 'ImageObject',
+      '@id': `${ogImageUrl}#image`,
+      url: ogImageUrl,
+      contentUrl: ogImageUrl,
+      width: 1200,
+      height: 630,
+      caption: 'Screenshot of samytamim.com — portfolio of Samy Tamim, software engineer.',
+    },
+  ],
+}
 ---
 
 <!DOCTYPE html>
@@ -23,8 +73,11 @@ const ogImageUrl = new URL(ogImage, SITE).href
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title}</title>
+  <title>{SITE_NAME}</title>
   <meta name="description" content={description} />
+  <!-- Allow Google to show the cover at full size in search results and
+       Discover; without `max-image-preview:large` it is capped at small. -->
+  <meta name="robots" content="index, max-image-preview:large" />
   <link rel="canonical" href={canonical} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={DEFAULT_TITLE} />
@@ -41,6 +94,7 @@ const ogImageUrl = new URL(ogImage, SITE).href
   <meta name="twitter:image" content={ogImageUrl} />
   <meta name="twitter:image:alt" content="Screenshot of samytamim.com — portfolio of Samy Tamim, software engineer." />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
