@@ -20,6 +20,7 @@
 
 \ifluafonts
   \usepackage{fontspec}
+  \usepackage{textcomp}
   \usepackage[expansion=false]{microtype}
   \IfFontExistsTF{Carlito}
     {\setmainfont{Carlito}[Ligatures=TeX, Numbers=Lining, BoldFont={Carlito Bold}]}
@@ -29,6 +30,9 @@
 \else
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
+  % textcomp gives \textquotesingle, a straight ASCII apostrophe. LaTeX's plain
+  % ' typesets as U+2019, which an ATS searching for "Master's" never matches.
+  \usepackage{textcomp}
   \IfFileExists{carlito.sty}
     {\usepackage[lining]{carlito}%
      \renewcommand{\familydefault}{\sfdefault}}
@@ -155,7 +159,7 @@ Software engineer with 2+ years of experience specializing in distributed system
 \section{Education}
 
 \entry{\href{https://www.42network.org/}{42 Paris}}{Aug 2027}\\
-\subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{Expert in IT Architecture} \textperiodcentered{} RNCP Level 7 (EQF 7) \textperiodcentered{} Data Architecture Specialization \textperiodcentered{} Master's level}{Paris, France}
+\subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{Expert in IT Architecture}, RNCP Level 7 (EQF 7), Data Architecture Specialization, Master\textquotesingle{}s level}{Paris, France}
 
 % ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
