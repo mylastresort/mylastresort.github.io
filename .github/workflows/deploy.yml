@@ -34,6 +34,10 @@ jobs:
         run: |
           docker run --rm -v "$PWD:/workspace" -w /workspace ghcr.io/xu-cheng/texlive-full:latest \
             sh -eu -c "kpsewhich carlito.sty && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=public -auxdir=/tmp/resume-aux resume/resume.tex && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'T1Crlt-LF' && ! cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -qi 'falling back' && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'Crlt-.*\.pfb' && test -s public/resume.pdf && echo 'resume: Carlito lining figures verified'"
+      - name: Verify resume layout
+        # Guards the one-page layout: page count, margins, and the rule that no
+        # prose line may end with fewer than four words (orphan fragments).
+        run: python3 scripts/check-resume.py public/resume.pdf
       - name: Build
         run: npm run build
       - name: Upload artifact
