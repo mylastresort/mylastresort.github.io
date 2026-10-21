@@ -27,8 +27,9 @@ LINE_TOLERANCE = 4.0
 # or a descender-free glyph whose ink extends past its advance width).
 # That is 0.6mm inside the physical margin, so allow it.
 MARGIN_TOLERANCE = 2.5
-# Lines that are structural by nature: the candidate's name and the section
-# headings. They are labels, not prose, so the >= 4 words rule does not apply.
+# Lines that are structural by nature: the candidate's name, the section
+# headings, and the labelled field lines in the education block. They are
+# labels, not prose, so the >= 4 words rule does not apply.
 STRUCTURAL_LINES = {
     "Samy Tamim",
     "Professional Summary",
@@ -36,6 +37,7 @@ STRUCTURAL_LINES = {
     "Projects",
     "Education",
     "Technical Skills",
+    "Specialization: Data Architecture",
 }
 # An entry/subentry header puts a right-aligned field after a wide gap
 # (e.g. "42 Paris        2027"). These are labels too, so the word-count rule
