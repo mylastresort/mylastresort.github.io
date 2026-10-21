@@ -51,29 +51,29 @@
   {}{0em}{}
   [\vspace{-0.38em}\rule{\linewidth}{0.7pt}\vspace{-0.33em}]
 
-\titlespacing{\section}{0pt}{0.999em}{0.383em}
+\titlespacing{\section}{0pt}{0.85em}{0.30em}
 
 % ── List styling ─────────────────────────────────────────────────────────────
 \setlist[itemize]{
   leftmargin = 1.1em,
-  itemsep    = 1.70pt,
-  topsep     = 2.06pt,
+  itemsep    = 1.45pt,
+  topsep     = 1.70pt,
   parsep     = 0pt,
   partopsep  = 0pt
 }
 
 % ── Helper commands ───────────────────────────────────────────────────────────
 \newcommand{\entry}[2]{%
-  \noindent\textbf{#1}\hfill{\small\itshape\textbf{#2}}\vspace{0.07em}%
+  \noindent\textbf{#1}\hfill{\small\itshape\textbf{#2}}\vspace{0.04em}%
 }
 \newcommand{\subentry}[2]{%
-  \noindent{\small\itshape #1}\hfill{\footnotesize #2}\vspace{0.07em}%
+  \noindent{\small\itshape #1}\hfill{\footnotesize #2}\vspace{0.04em}%
 }
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\renewcommand{\baselinestretch}{1.083}
+\renewcommand{\baselinestretch}{1.055}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{document}
@@ -82,15 +82,15 @@
 % Tip: match the headline to the target posting's title (e.g. "Senior Software Engineer")
 % only if you can defend it in an interview.
 \begin{center}
-  {\LARGE\bfseries\color{accent} Samy Tamim}\\[2pt]
-  {\small Software Engineer \textbar{} Distributed Systems \& IoT Architecture}\\[2pt]
+  {\LARGE\bfseries\color{accent} Samy Tamim}\\[1.5pt]
+  {\small Software Engineer \textbar{} Distributed Systems \& IoT Architecture}\\[1.5pt]
   \footnotesize
   +212 619 980 722 \enspace\textbullet\enspace \href{mailto:samytamim0@gmail.com}{samytamim0@gmail.com} \enspace\textbullet\enspace \href{https://www.linkedin.com/in/samy-tamim/}{linkedin.com/in/samy-tamim} \enspace\textbullet\enspace \href{https://samytamim.com}{samytamim.com} \enspace\textbullet\enspace \href{https://github.com/mylastresort}{github.com/mylastresort}
 \end{center}
 
 % ── Summary ──────────────────────────────────────────────────────────────────
 \section{Professional Summary}
-Software engineer with 2+ years of professional experience specializing in distributed systems, microservices, and event-driven architecture for IoT and real-time data platforms, including LLM-based agents. Leads architecture and delivery of a digital twin platform with predictive maintenance, with hands-on depth in \skill{Go}, \skill{Java}, \skill{Python}, and \skill{TypeScript}. Focusing on scalability, fault tolerance, security, and engineering practices (code review, TDD, CI/CD).
+Software engineer with 2+ years of professional experience specializing in distributed systems, microservices, and event-driven architecture for IoT and real-time data platforms, including LLM-based agents. Leads architecture and delivery of a digital twin platform with predictive maintenance, with hands-on depth in \skill{Go}, \skill{Java}, \skill{Python}, and \skill{TypeScript}. Focusing on scalability, fault tolerance, security, and engineering practices (code review, Test-Driven Development, CI/CD).
 
 % ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
@@ -105,7 +105,7 @@ Software engineer with 2+ years of professional experience specializing in distr
   \item Evaluated multiple \skill{SPOF} on the platform to ensure the system remains resilient.
 \end{itemize}
 
-\vspace{0.525em}
+\vspace{0.40em}
 
 \entry{Full-Stack Development Intern}{November 2023 – May 2024}\\
 \subentry{\href{https://um6p.ma/}{Mohammed VI Polytechnic University (UM6P)}}{Rabat, Morocco}
@@ -118,13 +118,22 @@ Software engineer with 2+ years of professional experience specializing in distr
 \section{Projects}
 
 \entry{\href{https://github.com/mylastresort/taskmaster}{Job Control System}}{September 2026}\\
-\subentry{Go, Async Jobs}{}
+\subentry{Go, Async Jobs, TOML}{}
 \begin{itemize}
   \item Building a job orchestration system with an internal queue handling 1\,000+ async tasks/min and 15+ config options.
   \item Implementing a worker pool with graceful shutdown, dead-letter queues, and automatic retries for fault tolerance.
+  \item Built the \skill{Go} client/server core with supervisor-style \skill{TOML} configuration, shipped via \skill{Docker Compose} with CI tests.
 \end{itemize}
 
-\vspace{0.525em}
+\vspace{0.40em}
+
+\entry{\href{https://github.com/Archer-01/inception-of-things}{Inception of Things}}{August 2026}\\
+\subentry{Kubernetes, ArgoCD, GitLab CI/CD, Vagrant, k3s/k3d, Infrastructure as Code}{}
+\begin{itemize}
+  \item Built \skill{k3s}/\skill{k3d} \skill{Kubernetes} clusters on \skill{Vagrant} and \skill{Docker}, with \skill{GitLab CI/CD} pipelines and \skill{ArgoCD} \skill{GitOps} from \skill{Git}.
+\end{itemize}
+
+\vspace{0.40em}
 
 \entry{\href{https://github.com/mylastresort/hypertube}{Video Streaming Platform}}{December 2025}\\
 \subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2}{}
@@ -137,26 +146,21 @@ Software engineer with 2+ years of professional experience specializing in distr
 % ── Education ─────────────────────────────────────────────────────────────────
 \section{Education}
 
-\entry{Expert in IT Architecture}{November 2021 – Present}\\
-\noindent{\small\href{https://www.42network.org/}{42 Paris}\enspace\textperiodcentered\enspace \href{https://www.francecompetences.fr/recherche/rncp/39774}{RNCP 39774, Level 7 (Master's-level)}\enspace\textperiodcentered\enspace Data Architecture option}
-\begin{itemize}
-  \item Pursuing Data \& AI specialization while completing peer-learning curriculum in algorithms, web, and system programming.
-\end{itemize}
+\entry{\href{https://www.42network.org/}{42 Paris}}{2027}\\
+\subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{Master in Data Architecture}}{Paris, France}
 
 % ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 
 \renewcommand{\arraystretch}{1.073}
 \begin{tabularx}{\linewidth}{@{} >{\bfseries\footnotesize}l X @{}}
-  Languages            & \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
-  Frontend             & \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS, Leaflet.js \\
-  Backend              & \footnotesize Node.js, NestJS, Flask, FastAPI, Spring Boot, REST APIs, Microservices \\
-  Databases            & \footnotesize PostgreSQL, MySQL, MongoDB, Redis, SQL Optimization, Caching \\
-  DevOps \& Cloud      & \footnotesize Docker, GitHub Actions, Git, AWS, CI/CD (Continuous Integration/Continuous Delivery) \\
-  Architecture         & \footnotesize Distributed Systems, System Design, Event-Driven Architecture, Microservices, Design Patterns, Scalability, Fault Tolerance \\
-  AI \& Agents         & \footnotesize Google ADK, MCP, Multi-Agent Systems, Ollama (Local LLMs), Tool Calling, Prompt Engineering, LLM Evaluation \\
-  IoT \& Real-Time     & \footnotesize MQTT, WebSockets, Digital Twins, Real-Time Data Processing, FFmpeg \\
-  Security \& Practices & \footnotesize OAuth2, JWT, OWASP Top 10, Test-Driven Development (TDD), Agile/Scrum, Code Review \\
+  Languages           & \footnotesize TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
+  Frontend            & \footnotesize React, Next.js, Angular, HTML/CSS, Tailwind CSS, Leaflet.js \\
+  Backend \& Data     & \footnotesize Node.js, NestJS, Flask, FastAPI, Spring Boot, REST APIs, PostgreSQL, MySQL, MongoDB, Redis, SQL Optimization, Caching \\
+  Cloud \& DevOps     & \footnotesize Docker, Docker Compose, Kubernetes, Vagrant, ArgoCD, GitLab CI/CD, GitHub Actions, Git, AWS, IaC, System Administration \\
+  Architecture        & \footnotesize Distributed Systems, System Design, Event-Driven Architecture, Microservices, Design Patterns, Scalability, Fault Tolerance \\
+  AI \& Agents        & \footnotesize Google ADK, MCP, Multi-Agent Systems, Ollama (Local LLMs), Tool Calling, Prompt Engineering, LLM Evaluation \\
+  IoT \& Security     & \footnotesize MQTT, WebSockets, Digital Twins, Real-Time Data Processing, FFmpeg, OAuth2, JWT, OWASP Top 10, TDD, Agile/Scrum, Code Review \\
 \end{tabularx}
 
 \end{document}
