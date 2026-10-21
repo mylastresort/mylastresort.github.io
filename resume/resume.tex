@@ -35,6 +35,10 @@
     {\usepackage{lmodern}%
      \PackageWarning{resume}{carlito.sty not found - falling back to lmodern. Install texlive-fonts-extra for Carlito}}
   \usepackage[expansion=false]{microtype}
+  % pdfTeX builds the fi/fl/ff ligatures straight into the text layer, so the
+  % PDF spells "configuration" as "con<0xFB01>guration" and an ATS matching the
+  % literal keyword misses it. Turning them off keeps the words searchable.
+  \DisableLigatures{family=*}
   \newcommand{\skill}[1]{\textbf{#1}}
 \fi
 
@@ -43,7 +47,11 @@
 \definecolor{link}{HTML}{2563EB}
 
 % ── Hyperref ─────────────────────────────────────────────────────────────────
-\hypersetup{colorlinks=true, urlcolor=link, hidelinks, pdfnewwindow=true, linkbordercolor={1 1 1}}
+\hypersetup{colorlinks=true, urlcolor=link, hidelinks, pdfnewwindow=true, linkbordercolor={1 1 1},
+  pdftitle={Samy Tamim - Software Engineer Resume},
+  pdfauthor={Samy Tamim},
+  pdfsubject={Software Engineer - Distributed Systems, IoT Architecture and AI Agents},
+  pdfkeywords={Software Engineer, Distributed Systems, Microservices, Event-Driven Architecture, Kubernetes, Kafka, MQTT, Go, Python, Java, TypeScript, Digital Twin, Predictive Maintenance, AI Agents, MCP, LLM, CI/CD, RNCP Level 7}}
 
 % ── Section styling ──────────────────────────────────────────────────────────
 \titleformat{\section}
