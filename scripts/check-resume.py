@@ -23,7 +23,8 @@ MIN_WORDS = 4
 # higher), so cluster by baseline with a tolerance instead of exact equality.
 LINE_TOLERANCE = 4.0
 # Fully justified lines that end flush with the right margin can overrun the
-# text block by ~1.7pt because of glyph side bearings (e.g. the "∼" in "~98").
+# text block by ~1.7pt because of glyph side bearings (e.g. a trailing comma
+# or a descender-free glyph whose ink extends past its advance width).
 # That is 0.6mm inside the physical margin, so allow it.
 MARGIN_TOLERANCE = 2.5
 # Lines that are structural by nature: the candidate's name and the section
