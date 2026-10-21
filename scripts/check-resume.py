@@ -52,7 +52,14 @@ def is_header_line(words):
 
 
 def load_words(pdf: Path):
+    import shutil
     import subprocess
+
+    if shutil.which("pdftotext") is None:
+        raise SystemExit(
+            "pdftotext not found: install poppler-utils "
+            "(Debian/Ubuntu: apt-get install -y poppler-utils, macOS: brew install poppler)"
+        )
 
     xml = subprocess.run(
         ["pdftotext", "-bbox", str(pdf), "-"],
