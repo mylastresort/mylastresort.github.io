@@ -116,6 +116,19 @@ body {
   background: var(--link);
 }
 
+/* Visually hidden, still announced by screen readers. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ── NAV ── */
 nav {
   position: sticky;
@@ -622,9 +635,61 @@ h2.section-title {
   margin-top: 0.625rem;
 }
 
+/* Series cards stretch to fill their row (auto-fit collapses the empty
+   tracks auto-fill would leave behind), so three cards read as a set. */
+.project-grid--series {
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+}
+
+/* Everything outside a series, set off by a rule. */
+.project-grid--more {
+  margin-top: 3rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ── PROJECT SERIES ── */
+.project-series + .project-series {
+  margin-top: 3rem;
+}
+
+.project-series-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-series-title {
+  font-family: var(--font-body);
+  font-size: 1.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.project-series-count {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.project-series-blurb {
+  max-width: 60ch;
+  margin-bottom: 1.125rem;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
 .project-card {
   position: relative;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border);
@@ -632,6 +697,11 @@ h2.section-title {
   overflow: hidden;
   background: var(--bg);
   transition: border-color 0.15s, transform 0.15s;
+}
+
+/* Only cards with a destination lift on hover. */
+.project-card.has-link {
+  cursor: pointer;
 }
 
 /* Whole-card click target. Scoped to the title link so secondary actions
@@ -643,8 +713,8 @@ h2.section-title {
   z-index: 0;
 }
 
-.project-card:hover,
-.project-card:focus-within {
+.project-card.has-link:hover,
+.project-card.has-link:focus-within {
   border-color: var(--link);
   transform: translateY(-2px);
 }
@@ -665,14 +735,82 @@ h2.section-title {
   display: block;
 }
 
+/* Placeholder used until a project has a screenshot: a dark plate with the
+   series part number, so the sequence still reads at a glance. */
+.project-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 1.375rem 1.125rem;
+  color: var(--tag-text);
+  font-family: var(--font-mono);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 2.5rem 100%;
+}
+
+.project-placeholder-count {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.project-placeholder-part {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.project-placeholder-total {
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  opacity: 0.55;
+}
+
+.project-placeholder-series {
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
 .project-flag {
   position: absolute;
   top: 0.9375rem;
   left: 0.9375rem;
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  background: var(--badge-dark-bg);
+  color: var(--badge-dark-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* On the dark placeholder plate the dark flag would disappear, and the
+   top-left corner is occupied by the part number, so the flag moves right. */
+.project-preview--placeholder .project-flag {
+  left: auto;
+  right: 0.9375rem;
+  background: var(--tag-text);
+  color: var(--tag-bg);
+}
+
+/* Part counter over a real screenshot; the placeholder shows its own. */
+.project-part {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
   background: var(--badge-dark-bg);
   color: var(--badge-dark-text);
   padding: 0.3125rem 0.6875rem;
@@ -681,6 +819,10 @@ h2.section-title {
 
 .project-card.is-teaser .project-preview img {
   filter: grayscale(0.55);
+  opacity: 0.6;
+}
+
+.project-card.is-teaser .project-placeholder {
   opacity: 0.6;
 }
 
@@ -693,16 +835,25 @@ h2.section-title {
 
 .project-header {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 0.375rem 0.75rem;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.125rem;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .project-title {
   display: flex;
   align-items: baseline;
   gap: 0.375rem;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: 0;
   margin: 0;
   width: auto;
@@ -756,16 +907,17 @@ h2.section-title {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4375rem;
+  gap: 0.375rem;
   flex: 0 0 auto;
-  min-height: 2rem;
-  padding: 0 0.5rem;
+  align-self: flex-start;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
   color: var(--muted);
   background: transparent;
   border: 1px solid var(--border);
-  border-radius: 0.25rem;
+  border-radius: 9999px;
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
@@ -786,8 +938,12 @@ h2.section-title {
 .project-source-icon {
   display: block;
   flex: none;
-  width: 1rem;
-  height: 1rem;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.project-card.is-static .project-title {
+  color: var(--text);
 }
 
 .project-card.is-teaser .project-title,
@@ -802,6 +958,19 @@ h2.section-title {
   flex: 1;
 }
 
+.project-footer {
+  display: block;
+  margin-top: 0.875rem;
+}
+
+.project-meta {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-top: 0.125rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .project-card,
   .project-title-link,
@@ -810,8 +979,8 @@ h2.section-title {
     transition: none;
   }
 
-  .project-card:hover,
-  .project-card:focus-within {
+  .project-card.has-link:hover,
+  .project-card.has-link:focus-within {
     transform: none;
   }
 }
