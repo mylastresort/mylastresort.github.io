@@ -33,9 +33,12 @@ const total = group?.total
     ) : (
       <div class="project-placeholder" aria-hidden="true">
         {group ? (
-          <span class="project-placeholder-count">
-            <span class="project-placeholder-part">{String(part).padStart(2, '0')}</span>
-          </span>
+          <>
+            <span class="project-placeholder-count">
+              <span class="project-placeholder-part">{String(part).padStart(2, '0')}</span>
+            </span>
+            <span class="project-placeholder-watermark">{group.name}</span>
+          </>
         ) : (
           <span class="project-placeholder-series">{title}</span>
         )}

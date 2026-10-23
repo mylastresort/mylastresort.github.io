@@ -4,7 +4,7 @@
 export const series = [
   {
     id: 'ai-native',
-    name: 'AI-native engineering',
+    name: 'AI-Native Engineering 101',
     total: 3,
     blurb:
       'Three builds, each feeding the next: index a codebase, let a local model patch it, then hand the loop to an autonomous agent.',

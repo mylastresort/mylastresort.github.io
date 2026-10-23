@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import { projects, series } from '../data/projects.js'
 
-// Order: Gomoku, Music Room, then AI-native engineering series (IoC, IoW, Agent Smith).
+// Order: Gomoku, Music Room, then AI-native engineering 101 series (IoC, IoW, Agent Smith).
 const ordered = []
 const seen = new Set()
 
@@ -32,7 +32,7 @@ for (const group of series) {
 
 <Base
   title="Projects - Samy Tamim"
-  description="Things Samy Tamim has built: the AI-native engineering series (Inception-of-Context, Inception-of-Wisdom, Agent Smith), Gomoku, and Music Room."
+  description="Things Samy Tamim has built: the AI-native engineering 101 series (Inception-of-Context, Inception-of-Wisdom, Agent Smith), Gomoku, and Music Room."
   path="/projects/"
 >
   <Nav />

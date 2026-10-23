@@ -780,6 +780,18 @@ h2.section-title {
   opacity: 0.72;
 }
 
+/* Series name sits at the foot of the plate as a low-contrast watermark, so a
+   placeholder still reads as part of its series without competing with the
+   part number. */
+.project-placeholder-watermark {
+  max-width: 100%;
+  font-size: 1.65rem;
+  line-height: 1.35;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
 .project-flag {
   position: absolute;
   top: 0.9375rem;
