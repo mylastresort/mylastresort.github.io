@@ -634,13 +634,17 @@ h2.section-title {
   transition: border-color 0.15s, transform 0.15s;
 }
 
-.project-card a::after {
+/* Whole-card click target. Scoped to the title link so secondary actions
+   (the source button) keep their own hit area. */
+.project-title-link::after {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 0;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-within {
   border-color: var(--link);
   transform: translateY(-2px);
 }
@@ -687,27 +691,47 @@ h2.section-title {
   padding: 0.9375rem 1.125rem 1.125rem;
 }
 
+.project-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem 0.75rem;
+}
+
 .project-title {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 0.5rem;
-  width: 100%;
+  gap: 0.375rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  width: auto;
+  font-family: var(--font-body);
   font-size: 1.8125rem;
-  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--link);
   text-decoration: none;
   cursor: inherit;
 }
 
-.project-title a {
-  color: var(--link);
+.project-title-link {
+  color: inherit;
   text-decoration: underline;
   text-decoration-color: transparent;
+  text-underline-offset: 0.14em;
   transition: text-decoration-color 0.15s;
 }
 
-.project-title a:hover {
-  text-decoration-color: var(--link);
+.project-card:hover .project-title-link,
+.project-title-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.project-title-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .project-arrow {
@@ -719,13 +743,55 @@ h2.section-title {
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
-.project-title a:hover + .project-arrow,
-.project-card:hover .project-arrow {
+.project-card:hover .project-arrow,
+.project-title-link:focus-visible + .project-arrow {
   opacity: 1;
   transform: translateX(0);
 }
 
-.project-card.is-teaser .project-title {
+/* Secondary action: a quiet labelled button above the stretched card link. */
+.project-source-button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4375rem;
+  flex: 0 0 auto;
+  min-height: 2rem;
+  padding: 0 0.5rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.project-source-button:hover {
+  color: var(--link);
+  border-color: var(--link);
+  background: var(--callout-bg);
+}
+
+.project-source-button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.project-source-icon {
+  display: block;
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+}
+
+.project-card.is-teaser .project-title,
+.project-card.is-teaser .project-arrow {
   color: var(--muted);
 }
 
@@ -734,6 +800,20 @@ h2.section-title {
   font-size: 1.25rem;
   color: var(--text);
   flex: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-title-link,
+  .project-source-button,
+  .project-arrow {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .project-card:focus-within {
+    transform: none;
+  }
 }
 
 /* ── ARTICLE ── */
