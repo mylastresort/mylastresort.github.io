@@ -1,0 +1,230 @@
+---
+import Base from './Base.astro'
+import Nav from '../components/Nav.astro'
+import { formatDate } from '../lib/posts.js'
+import photo from '../assets/photo.jpg'
+
+const { frontmatter, slug, headings = [] } = Astro.props
+
+const published = frontmatter.date
+const updated = frontmatter.updated
+const version = frontmatter.version
+const author = frontmatter.author
+const tags = frontmatter.tags || []
+const cover = frontmatter.cover
+const coverAlt = frontmatter.coverAlt || frontmatter.title
+
+const toc = (headings || [])
+  .filter((h) => h.depth >= 2 && h.depth <= 3)
+  .map((h) => ({ ...h, slug: h.slug || h.id }))
+
+---
+
+<Base
+  title={frontmatter.title}
+  description={frontmatter.description}
+  path={`/blog/${slug}/`}
+>
+  <Nav />
+  <div class="page-wrap active">
+    <div class:list={['page-inner', 'blog-inner', { 'blog-inner-has-toc': toc.length > 0 }]}>
+      {toc.length > 0 && (
+        <aside class="blog-sidebar blog-sidebar-left" aria-label="Article navigation">
+          <section class="blog-sidebar-section blog-sidebar-toc">
+            <div class="blog-sidebar-title">On this page</div>
+            <nav class="blog-toc-nav" aria-label="Table of contents">
+              <ol class="blog-toc-list">
+                {toc.map((h) => (
+                  <li class={`blog-toc-item blog-toc-depth-${h.depth}`}>
+                    <a class="blog-toc-link" href={`#${h.slug}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </section>
+        </aside>
+      )}
+
+      <main class="content-area blog-content">
+        <div class="article-back-row">
+          <a class="article-back-link" href="/blog/">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 19-7-7 7-7M5 12h14" />
+            </svg>
+            <span>Back to posts</span>
+          </a>
+        </div>
+
+        <article class="article">
+          <header class="article-header">
+            <h1 class="article-title">{frontmatter.title}</h1>
+            <div class="article-meta article-meta-row">
+              <div class="article-meta-group">
+                <span>Published:</span>
+                <time datetime={published.toISOString()}>{formatDate(published)}</time>
+              </div>
+              {updated && (
+                <div class="article-meta-group">
+                  <span>Last updated on:</span>
+                  <time datetime={updated.toISOString()}>{formatDate(updated)}</time>
+                </div>
+              )}
+              {version && (
+                <div class="article-meta-group">
+                  <span>Version:</span>
+                  <span>{version}</span>
+                </div>
+              )}
+            </div>
+          </header>
+
+          <aside class="blog-mobile-context" aria-label="Post information">
+            <div class="blog-mobile-byline">
+              <div class="blog-avatar blog-avatar-compact">
+                <img src={photo.src} alt="" />
+              </div>
+              <div>
+                <div class="blog-sidebar-title">Written by</div>
+                {author && <div class="blog-author-name">{author}</div>}
+              </div>
+            </div>
+
+            {tags.length > 0 && (
+              <div class="blog-tags" aria-label="Topics">
+                {tags.map((tag) => (
+                  <a class="blog-tag" href={`/blog/?tag=${encodeURIComponent(tag)}`}>{tag}</a>
+                ))}
+              </div>
+            )}
+
+            {toc.length > 0 && (
+              <details class="blog-mobile-toc">
+                <summary>Table of contents <span aria-hidden="true">({toc.length})</span></summary>
+                <nav class="blog-toc-nav" aria-label="Table of contents">
+                  <ol class="blog-toc-list">
+                    {toc.map((h) => (
+                      <li class={`blog-toc-item blog-toc-depth-${h.depth}`}>
+                        <a class="blog-toc-link" href={`#${h.slug}`}>{h.text}</a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              </details>
+            )}
+          </aside>
+
+          {cover && (
+            <figure class="article-cover">
+              <img src={cover} alt={coverAlt} loading="lazy" />
+            </figure>
+          )}
+
+          <div class="article-body">
+            <slot />
+          </div>
+
+        </article>
+      </main>
+
+      <aside class="blog-sidebar blog-sidebar-right" aria-label="About this post">
+        <section class="blog-sidebar-section">
+          <div class="blog-sidebar-title">Written by</div>
+          <div class="blog-author">
+            <div class="blog-avatar">
+              <img src={photo.src} alt="" />
+            </div>
+            {author && <div class="blog-author-name">{author}</div>}
+          </div>
+        </section>
+
+        <section class="blog-sidebar-section">
+          <div class="blog-sidebar-title">Post details</div>
+          <dl class="blog-post-details">
+            <div>
+              <dt>Published</dt>
+              <dd><time datetime={published.toISOString()}>{formatDate(published)}</time></dd>
+            </div>
+            {updated && (
+              <div>
+                <dt>Updated</dt>
+                <dd><time datetime={updated.toISOString()}>{formatDate(updated)}</time></dd>
+              </div>
+            )}
+            {version && (
+              <div>
+                <dt>Version</dt>
+                <dd>{version}</dd>
+              </div>
+            )}
+          </dl>
+        </section>
+
+        {tags.length > 0 && (
+          <section class="blog-sidebar-section">
+            <div class="blog-sidebar-title">Topics</div>
+            <div class="blog-tags">
+              {tags.map((tag) => (
+                <a class="blog-tag" href={`/blog/?tag=${encodeURIComponent(tag)}`}>{tag}</a>
+              ))}
+            </div>
+          </section>
+        )}
+      </aside>
+    </div>
+  </div>
+</Base>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const headings = Array.from(document.querySelectorAll('.article-body :is(h2, h3, h4)'));
+    headings.forEach((heading) => {
+      if (heading.id && !heading.querySelector('.heading-anchor')) {
+        const link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.className = 'heading-anchor';
+        link.textContent = '#';
+        link.setAttribute('aria-label', 'Link to section');
+        heading.appendChild(link);
+      }
+    });
+
+    const tocLinks = Array.from(document.querySelectorAll('.blog-toc-link'));
+    if (tocLinks.length === 0) return;
+    const targets = headings
+      .filter((h) => h.id)
+      .map((h) => ({
+        el: h,
+        links: tocLinks.filter((l) => l.getAttribute('href') === '#' + h.id),
+      }))
+      .filter((x) => x.links.length > 0);
+
+    const updateActiveSection = () => {
+      const navHeight = parseFloat(
+        getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
+      ) || 80;
+      const marker = navHeight + 32;
+      let current = targets[0];
+
+      targets.forEach((target) => {
+        if (target.el.getBoundingClientRect().top <= marker) current = target;
+      });
+
+      tocLinks.forEach((link) => link.classList.remove('active'));
+      current?.links.forEach((link) => link.classList.add('active'));
+    };
+
+    let scheduled = false;
+    const scheduleUpdate = () => {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(() => {
+        updateActiveSection();
+        scheduled = false;
+      });
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+  });
+</script>

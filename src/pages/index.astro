@@ -2,7 +2,9 @@
 import Base from '../layouts/Base.astro'
 import Nav from '../components/Nav.astro'
 import Sidebar from '../components/Sidebar.astro'
-import { recentPosts } from '../data/site.js'
+import { formatDate, getPosts, postHref } from '../lib/posts.js'
+
+const recentPosts = (await getPosts()).slice(0, 5)
 ---
 
 <Base
@@ -27,11 +29,11 @@ import { recentPosts } from '../data/site.js'
         <ul class="post-list">
           {recentPosts.map((post) => (
             <li>
-              <a class="nav-link" href={'/' + post.id + '/'}>{post.title}</a>
+              <a class="nav-link" href={postHref(post)}>{post.data.title}</a>
               <div class="post-meta">
-                <span>📅</span> {post.date}
+                <span>📅</span> {formatDate(post.data.date)}
                 <span>—</span>
-                <span>👤</span> {post.author}
+                <span>👤</span> {post.data.author}
               </div>
             </li>
           ))}

@@ -35,12 +35,3 @@ export const contactLinks = [
     icon: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5v17"/><path d="M6.5 12 17 3.5"/><path d="M6.5 12 17 20.5"/></svg>',
   },
 ]
-
-export const recentPosts = [
-  {
-    id: 'article-eeg',
-    title: 'Total Perspective Vortex: classifying motor imagery EEG with CSP + LDA',
-    date: 'May 14, 2026',
-    author: 'mylastresort',
-  },
-]

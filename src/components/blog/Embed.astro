@@ -1,0 +1,26 @@
+---
+interface Props {
+  type: 'youtube' | 'twitter' | 'x'
+  id: string
+}
+
+const { type, id } = Astro.props
+---
+
+<div class="embed-container">
+  {type === 'youtube' && (
+    <iframe
+      src={`https://www.youtube.com/embed/${id}`}
+      title="YouTube video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  )}
+  {type === 'twitter' || type === 'x' && (
+    <blockquote class="twitter-tweet">
+      <a href={`https://twitter.com/x/status/${id}`}></a>
+    </blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  )}
+</div>

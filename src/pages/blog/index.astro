@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro'
+import Nav from '../../components/Nav.astro'
+import Sidebar from '../../components/Sidebar.astro'
+import { getPosts, formatDate, postHref } from '../../lib/posts.js'
+
+const posts = await getPosts()
+---
+
+<Base
+  title="Blog - Samy Tamim"
+  description="Blog posts on machine learning, software engineering, and technology."
+  path="/blog/"
+>
+  <Nav />
+  <div class="page-wrap active">
+    <div class="page-inner">
+      <div class="content-area">
+        <div class="breadcrumb"><span>~ / </span>blog</div>
+
+        <div class="archive-year">
+          <h3>Posts</h3>
+          {/* Shown only when a ?tag= filter is active (see script below). */}
+          <p class="tag-filter-note" hidden>
+            Showing posts tagged <span class="tag-filter-tag"></span> ·
+            <a class="nav-link" href="/blog/">show all</a>
+          </p>
+          <ul class="archive-list" id="post-list">
+            {posts.map((post) => (
+              <li data-tags={post.data.tags.join(',')}>
+                <span class="date">{formatDate(post.data.date)}</span>
+                <a class="nav-link" href={postHref(post)}>{post.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <Sidebar />
+    </div>
+  </div>
+</Base>
+
+<script>
+  // Tag pills on post pages link here with ?tag=x; filter the list client-side.
+  const tag = new URLSearchParams(location.search).get('tag');
+  if (tag) {
+    const list = document.getElementById('post-list');
+    const note = document.querySelector('.tag-filter-note');
+    if (list && note) {
+      let shown = 0;
+      list.querySelectorAll('li[data-tags]').forEach((li) => {
+        const tags = (li.getAttribute('data-tags') || '').split(',');
+        const match = tags.includes(tag);
+        li.hidden = !match;
+        if (match) shown += 1;
+      });
+      if (shown === 0) {
+        list.querySelectorAll('li[data-tags]').forEach((li) => { li.hidden = false; });
+      } else {
+        note.querySelector('.tag-filter-tag').textContent = `“${tag}”`;
+        note.hidden = false;
+      }
+    }
+  }
+</script>

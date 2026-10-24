@@ -1,0 +1,32 @@
+---
+interface Props {
+  chart: string
+}
+
+const { chart } = Astro.props
+---
+
+<div class="mermaid-container">
+  <pre class="mermaid">
+{chart}
+  </pre>
+</div>
+
+<script>
+  import mermaid from 'mermaid'
+
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      darkMode: true,
+      background: 'transparent',
+      primaryColor: '#569cd6',
+      primaryTextColor: '#d4d4d4',
+      primaryBorderColor: '#569cd6',
+      lineColor: '#d4d4d4',
+      secondaryColor: '#1e1e1e',
+      tertiaryColor: '#252526'
+    }
+  })
+</script>
