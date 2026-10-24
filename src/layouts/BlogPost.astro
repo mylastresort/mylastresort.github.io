@@ -46,13 +46,11 @@ const toc = (headings || [])
       )}
 
       <main class="content-area blog-content">
-        <div class="article-back-row">
-          <a class="article-back-link" href="/blog/">
-            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m12 19-7-7 7-7M5 12h14" />
-            </svg>
-            <span>Back to posts</span>
-          </a>
+        <div class="breadcrumb article-breadcrumb" role="navigation" aria-label="Breadcrumb">
+          <span aria-hidden="true">~ / </span>
+          <a class="nav-link" href="/blog/">blog</a>
+          <span aria-hidden="true"> / </span>
+          <span class="article-breadcrumb-current" aria-current="page">{frontmatter.title}</span>
         </div>
 
         <article class="article">
@@ -176,6 +174,15 @@ const toc = (headings || [])
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const breadcrumb = document.querySelector('.article-breadcrumb');
+    const updateBreadcrumbHeight = () => {
+      document.documentElement.style.setProperty(
+        '--article-breadcrumb-h', `${breadcrumb?.getBoundingClientRect().height || 0}px`
+      );
+    };
+    updateBreadcrumbHeight();
+    if (breadcrumb) new ResizeObserver(updateBreadcrumbHeight).observe(breadcrumb);
+
     const headings = Array.from(document.querySelectorAll('.article-body :is(h2, h3, h4)'));
     headings.forEach((heading) => {
       if (heading.id && !heading.querySelector('.heading-anchor')) {
@@ -202,7 +209,7 @@ const toc = (headings || [])
       const navHeight = parseFloat(
         getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
       ) || 80;
-      const marker = navHeight + 32;
+      const marker = navHeight + (breadcrumb?.getBoundingClientRect().height || 0) + 32;
       let current = targets[0];
 
       targets.forEach((target) => {

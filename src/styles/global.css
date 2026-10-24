@@ -36,7 +36,7 @@
 html {
   font-size: clamp(12.5px, calc(9px + 0.28vw), 20px);
   /* Sticky nav: keep anchored targets clear of the top bar. */
-  scroll-padding-top: calc(var(--nav-h) + 1rem);
+  scroll-padding-top: calc(var(--nav-h) + var(--article-breadcrumb-h, 0px) + 1rem);
   scrollbar-width: thin;
   scrollbar-color: var(--muted) transparent;
 }
@@ -1419,38 +1419,22 @@ h2.section-title {
   background: var(--surface2);
 }
 
-.article-back-row {
-  display: flex;
+.article-breadcrumb {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 10;
+  padding: 0.75rem 0;
   margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  overflow-wrap: anywhere;
 }
 
-.article-back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  min-height: 44px;
-  padding: 0.5rem 0;
-  font-family: var(--font-mono);
-  font-size: max(16px, 1.25rem);
-  line-height: 1.4;
-  color: var(--muted);
-  text-decoration: none;
+.article-breadcrumb .article-breadcrumb-current {
+  color: var(--text);
 }
 
-.article-back-link svg {
-  flex: none;
-}
-
-.article-back-link:hover {
-  color: var(--link);
-}
-
-.article-back-link:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-}
-
-.article-back-link:focus-visible {
+.article-breadcrumb a:focus-visible {
   outline: 2px solid var(--link);
   outline-offset: 4px;
   border-radius: 0.25rem;
