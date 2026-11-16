@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "favicon": "./scripts/make-favicon.sh",
     "resume": "mkdir -p public && cd resume && pdflatex -halt-on-error -interaction=nonstopmode -output-directory=../public resume.tex && pdflatex -halt-on-error -interaction=nonstopmode -output-directory=../public resume.tex && rm -f ../public/resume.aux ../public/resume.log ../public/resume.out ../public/resume.synctex.gz && echo 'resume.pdf rebuilt -> public/resume.pdf'",
-    "resume:check": "python3 scripts/check-resume.py"
+    "resume:check": "python3 scripts/check-resume.py",
+    "resume:fr": "mkdir -p public && cd resume && pdflatex -halt-on-error -interaction=nonstopmode -output-directory=../public resume-fr.tex && pdflatex -halt-on-error -interaction=nonstopmode -output-directory=../public resume-fr.tex && rm -f ../public/resume-fr.aux ../public/resume-fr.log ../public/resume-fr.out ../public/resume-fr.synctex.gz && echo 'resume-fr.pdf rebuilt -> public/resume-fr.pdf'"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.1.0",

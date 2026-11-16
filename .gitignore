@@ -5,11 +5,15 @@ node_modules
 dist
 .astro
 
-# generated resume PDF (built from resume.tex in CI)
+# generated resume PDFs (built from resume.tex / resume-fr.tex in CI)
 public/resume.pdf
 public/resume.aux
 public/resume.log
 public/resume.out
+public/resume-fr.pdf
+public/resume-fr.aux
+public/resume-fr.log
+public/resume-fr.out
 
 # logs
 npm-debug.log*

@@ -38,6 +38,12 @@ STRUCTURAL_LINES = {
     "Education",
     "Technical Skills",
     "Specialization: Data Architecture",
+    # French version (resume/resume-fr.tex) structural lines.
+    "Résumé professionnel",
+    "Expérience professionnelle",
+    "Projets",
+    "Formation",
+    "Compétences techniques",
 }
 # An entry/subentry header puts a right-aligned field after a wide gap
 # (e.g. "42 Paris        2027"). These are labels too, so the word-count rule

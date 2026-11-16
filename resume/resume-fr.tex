@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Samy Tamim — CV (LaTeX), version française senior/ATS
+% Compilateur : pdflatex / XeLaTeX
+% Version FR de resume/resume.tex — garder les deux en synchronisation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper]{article}
+
+% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage[top=0.50in, bottom=0.50in, left=0.55in, right=0.55in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+
+% ── Fonts (Carlito, métriquement compatible avec Calibri) ────────────────────
+\newif\ifluafonts
+\ifdefined\XeTeXrevision\luafontstrue\fi
+\ifdefined\directlua\luafontstrue\fi
+
+\ifluafonts
+  \usepackage{fontspec}
+  \usepackage{textcomp}
+  \usepackage[expansion=false]{microtype}
+  \IfFontExistsTF{Carlito}
+    {\setmainfont{Carlito}[Ligatures=TeX, Numbers=Lining, BoldFont={Carlito Bold}]}
+    {\setmainfont{Latin Modern Roman}[Ligatures=TeX]%
+     \PackageWarning{resume}{Carlito system font not found - falling back. Install fonts-crosextra-carlito for Carlito}}
+  \newcommand{\skill}[1]{\textbf{#1}}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp}
+  \IfFileExists{carlito.sty}
+    {\usepackage[lining]{carlito}%
+     \renewcommand{\familydefault}{\sfdefault}}
+    {\usepackage{lmodern}%
+     \PackageWarning{resume}{carlito.sty not found - falling back to lmodern. Install texlive-fonts-extra for Carlito}}
+  \usepackage[expansion=false]{microtype}
+  \DisableLigatures{family=*}
+  \newcommand{\skill}[1]{\textbf{#1}}
+\fi
+
+% ── Couleurs ─────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{1A1A2E}
+\definecolor{link}{HTML}{2563EB}
+
+% ── Hyperref ─────────────────────────────────────────────────────────────────
+\hypersetup{colorlinks=true, urlcolor=link, hidelinks, pdfnewwindow=true, linkbordercolor={1 1 1},
+  pdftitle={Samy Tamim - CV Développeur Backend et IA},
+  pdfauthor={Samy Tamim},
+  pdfsubject={Développeur Backend et IA - Systèmes Distribués, Architecture IoT et Agents IA},
+  pdfkeywords={CV, Développeur Backend, Développeur IA, Systèmes Distribués, Microservices, Architecture Événementielle, Kubernetes, Kafka, MQTT, Go, Python, Java, TypeScript, Jumeau Numérique, Maintenance Prédictive, Agents IA, MCP, LLM, CI/CD, RNCP Niveau 7, Bac+5}}
+
+% ── Style des sections ───────────────────────────────────────────────────────
+\titleformat{\section}
+  {\normalsize\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-0.38em}\rule{\linewidth}{0.7pt}\vspace{-0.33em}]
+
+\titlespacing{\section}{0pt}{0.45em}{0.22em}
+
+% ── Style des listes ─────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin = 1.1em,
+  itemsep    = 0.90pt,
+  topsep     = 1.20pt,
+  parsep     = 0pt,
+  partopsep  = 0pt
+}
+
+% ── Commandes utilitaires ────────────────────────────────────────────────────
+\newcommand{\entry}[2]{%
+  \noindent\textbf{#1}\hfill{\small\textbf{#2}}\vspace{0.04em}%
+}
+\newcommand{\subentry}[2]{%
+  \noindent{\small #1}\hfill{\footnotesize #2}\vspace{0.04em}%
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+% French words can't hyphenate (no babel/french), so give TeX extra stretch to
+% avoid overfull justified lines in long words like "événementielle".
+\setlength{\emergencystretch}{1.5em}
+\renewcommand{\baselinestretch}{0.96}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ── En-tête ──────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries\color{accent} Samy Tamim}\\[1.5pt]
+  {\small Développeur Backend \& IA \textbar{} Systèmes Distribués \& Architecture IoT}\\[1.5pt]
+  \footnotesize
+  +33 781 805 041 \enspace\textbullet\enspace \href{mailto:contact@samytamim.com}{contact@samytamim.com} \enspace\textbullet\enspace \href{https://linkedin.com/in/samy-tamim}{https://linkedin.com/in/samy-tamim} \enspace\textbullet\enspace \href{https://samytamim.com}{https://samytamim.com} \enspace\textbullet\enspace \href{https://github.com/mylastresort}{https://github.com/mylastresort}
+\end{center}
+
+% ── Résumé ───────────────────────────────────────────────────────────────────
+\section{Résumé professionnel}
+Développeur backend et IA avec plus de 2 ans d'expérience, spé\-cialisé dans les systèmes distribués, les microservices et l'architecture événementielle pour des plateformes IoT et temps réel, y compris des agents LLM. Dirige une plateforme de jumeau numérique avec maintenance prédictive~; pratique approfondie de \skill{Go}, \skill{Java}, \skill{Python}, \skill{TypeScript}, \skill{Kubernetes}, \skill{Kafka} et \skill{MQTT}. Axé sur scalabilité, tolérance aux pannes, sécurité et pratiques d'ingénierie (revue de code, TDD, CI/CD).
+
+% ── Expérience ───────────────────────────────────────────────────────────────
+\section{Expérience professionnelle}
+
+\entry{Ingénieur Logiciel}{juin 2024 – aujourd'hui}\\
+\subentry{\href{https://um6p.ma/}{UM6P - Université Mohammed VI Polytechnique}}{Rabat, Maroc}
+\begin{itemize}
+  \item Conception et direction de l'architecture d'une plateforme de jumeau numérique pour la supervision IoT et la maintenance prédictive, ingérant les données de capteurs d'équipements industriels via \skill{MQTT} avec analyses en temps réel.
+  \item Développement d'un assistant d'exploitation IoT multi-agents sur \skill{Google ADK}~: sous-agents spécialisés (finder d'actifs, agent de télémétrie, agent PdM) en agent-as-tool, modèles \skill{Ollama} locaux et \skill{LiteLLM} en couche proxy pour des appels d'outils fiables, streaming et raisonnement, et environ 98 outils exposés via \skill{MCP} avec garde-fous contre les hallucinations~; évaluation des modèles et des agents via des benchmarks fondés sur les trajectoires.
+  \item Développement de microservices \skill{Kafka} et \skill{Python} avec cache \skill{Redis}, architecture entièrement \skill{sans état} (stateless), y compris les consommateurs et les flux.
+  \item Évaluation de plusieurs \skill{SPOF} de la plateforme pour garantir la résilience du système.
+\end{itemize}
+
+\vspace{0.40em}
+
+\entry{Stagiaire Développement Full-Stack}{décembre 2023 – mai 2024}\\
+\subentry{\href{https://um6p.ma/}{UM6P - Université Mohammed VI Polytechnique}}{Rabat, Maroc}
+\begin{itemize}
+  \item Développement, en équipe \skill{Agile} pluridisciplinaire, d'une plateforme suivant plus de 200 mouvements de navires par jour pour le commerce d'engrais, avec informations temps réel sur la chaîne d'approvisionnement et cartes interactives basées sur \skill{React.js} et Leaflet.js pour la visualisation.
+  \item Conception d'une API REST \skill{Flask} avec \skill{MySQL}, améliorant les performances du tableau de bord grâce à l'optimisation des requêtes et à la mise en cache.
+\end{itemize}
+
+% ── Projets ─────────────────────────────────────────────────────────────────
+\section{Projets}
+
+\entry{\href{https://github.com/mylastresort/taskmaster}{Système de Contrôle de Tâches}}{septembre 2026}\\
+\subentry{Go, Orchestration de Tâches Asynchrones}{}
+\begin{itemize}
+  \item Développement d'un système d'orchestration de tâches avec une file interne traitant plus de 1\,000 tâches asynchrones/min et 15+ options de configuration.
+  \item Implémentation d'un pool de workers avec arrêt gracieux, files dead-letter et reprises automatiques afin de renforcer la tolérance aux pannes du système.
+  \item Construction du cœur client/serveur \skill{Go} avec configuration \skill{TOML} de type superviseur, livré via \skill{Docker Compose} avec tests CI.
+\end{itemize}
+
+\vspace{0.40em}
+
+\entry{\href{https://github.com/mylastresort/multilayer-perceptron}{Perceptron Multicouche (MLP)}}{août 2026}\\
+\subentry{Rust, Réseaux de Neurones, Backpropagation from Scratch}{}
+\begin{itemize}
+  \item Développement d'un MLP configurable avec \skill{rétropropagation} de zéro en \skill{Rust}, piloté par des configurations \skill{YAML}.
+  \item Implémentation des optimiseurs \skill{SGD} et \skill{Adam}, early stopping et métriques par époque avec courbes d'apprentissage.
+\end{itemize}
+
+\vspace{0.40em}
+
+\entry{\href{https://github.com/mylastresort/hypertube}{Plateforme de Streaming Vidéo}}{décembre 2025}\\
+\subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2}{}
+\begin{itemize}
+  \item Développement d'un backend \skill{Go} scalable avec streaming HLS et gestion de cache optimisée pour une diffusion vidéo efficace.
+  \item Conception d'un schéma \skill{PostgreSQL} avec optimisation des requêtes et pooling de connexions.
+  \item Conduite de la livraison \skill{Agile} avec 3 développeurs, via sprint planning et stand-ups quotidiens.
+\end{itemize}
+
+% ── Formation ───────────────────────────────────────────────────────────────
+\section{Formation}
+
+\entry{\href{https://www.42network.org/}{42 Paris}, Paris, France}{prévu février 2027}\\
+\subentry{\href{https://www.francecompetences.fr/recherche/rncp/39774}{Architecte Expert en Technologies de l'Information}, RNCP Niveau 7\newline Spécialisation~: Architecture des Données}{}
+
+% ── Compétences techniques ──────────────────────────────────────────────────
+\section{Compétences techniques}
+
+{\small
+\renewcommand{\arraystretch}{1.02}
+\begin{tabularx}{\linewidth}{@{} >{\bfseries}l X @{}}
+  Langages            & TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
+  Frontend            & React, Next.js, Angular, HTML/CSS, Tailwind CSS, Leaflet.js \\
+  Backend \& Données  & Node.js, NestJS, FastAPI, Spring Boot, API REST, PostgreSQL, MySQL, MongoDB, Redis, Kafka, FFmpeg \\
+  Cloud \& DevOps     & Docker, Docker Compose, Kubernetes, Linux, Vagrant, ArgoCD, GitLab CI/CD, GitHub Actions,\newline Git, AWS, IaC, Terraform, Prometheus, Grafana, Administration Système \\
+  Architecture        & Systèmes Distribués, Architecture Événementielle, Microservices, Design Patterns, Tolérance aux Pannes, Scalabilité \\
+  IA \& Agents        & Google ADK, MCP, Systèmes Multi-Agents, Ollama (LLM locaux), Tool Calling, Prompt Engineering, Évaluation de LLM \\
+  IoT \& Temps Réel   & MQTT, WebSockets, Jumeaux Numériques, Traitement de Données Temps Réel \\
+  Sécurité            & OAuth2, JWT, OWASP Top 10 \\
+\end{tabularx}
+}
+
+\end{document}
