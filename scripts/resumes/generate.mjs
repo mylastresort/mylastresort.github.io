@@ -34,9 +34,10 @@ const projectsRe = /(\\section\{Projects\}\n)[\s\S]*?(\\section\{Education\})/;
 
 function projectEntry(p) {
   const bullets = p.bullets.map((b) => `  \\item ${esc(b)}`).join("\n");
+  // Trailing \\ forces the stack line below the title/date line (like the base resume).
   const link = p.link
-    ? `\\entry{\\href{${p.link}}{${esc(p.name)}}}{${esc(p.date)}}`
-    : `\\entry{${esc(p.name)}}{${esc(p.date)}}`;
+    ? `\\entry{\\href{${p.link}}{${esc(p.name)}}}{${esc(p.date)}}\\\\`
+    : `\\entry{${esc(p.name)}}{${esc(p.date)}}\\\\`;
   return [
     link,
     `\\subentry{${esc(p.stack)}}{}`,
