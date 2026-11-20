@@ -27,8 +27,9 @@ const esc = (s) => {
     .replace(/[~^]/g, "");
 };
 
+// The headline/subheadline line under the name is removed entirely (user request).
 // The line ends with a LaTeX linebreak "\\[1.5pt]" — two literal backslashes.
-const headlineRe = /\{\\small Backend[^\n]*\}\\\\\[1\.5pt\]/;
+const headlineRe = /^[ \t]*\{\\small Backend[^\n]*\}\\\\\[1\.5pt\]\n/m;
 const summaryRe = /(\\section\{Professional Summary\}\n)[\s\S]*?(\\section\{Experience\})/;
 const projectsRe = /(\\section\{Projects\}\n)[\s\S]*?(\\section\{Education\})/;
 
@@ -50,7 +51,7 @@ function projectEntry(p) {
 for (const role of roles) {
   let tex = base;
 
-  tex = tex.replace(headlineRe, `{\\small ${esc(role.headline)}}\\\\[1.5pt]`);
+  tex = tex.replace(headlineRe, "");
   tex = tex.replace(summaryRe, (m, head, tail) => `${head}${esc(role.summary)}\n\n${tail}`);
   tex = tex.replace(/pdfsubject=\{[^}]*\}/, `pdfsubject={${role.name}}`);
   tex = tex.replace(/pdfkeywords=\{[^}]*\}/, `pdfkeywords={${role.keywords}}`);
