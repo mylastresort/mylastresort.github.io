@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Samy Tamim — Résumé (LaTeX), senior/ATS version
+% Compiler: pdflatex / XeLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper]{article}
+
+% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage[top=0.50in, bottom=0.50in, left=0.55in, right=0.55in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+
+% ── Fonts (Carlito, metric-compatible with Calibri) ────────────────────────────
+\newif\ifluafonts
+\ifdefined\XeTeXrevision\luafontstrue\fi
+\ifdefined\directlua\luafontstrue\fi
+
+\ifluafonts
+  \usepackage{fontspec}
+  \usepackage{textcomp}
+  \usepackage[expansion=false]{microtype}
+  \IfFontExistsTF{Carlito}
+    {\setmainfont{Carlito}[Ligatures=TeX, Numbers=Lining, BoldFont={Carlito Bold}]}
+    {\setmainfont{Latin Modern Roman}[Ligatures=TeX]%
+     \PackageWarning{resume}{Carlito system font not found - falling back. Install fonts-crosextra-carlito for Carlito}}
+  \newcommand{\skill}[1]{\textbf{#1}}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  % textcomp gives \textquotesingle, a straight ASCII apostrophe. LaTeX's plain
+  % ' typesets as U+2019, which an ATS searching for "Master's" never matches.
+  \usepackage{textcomp}
+  \IfFileExists{carlito.sty}
+    {\usepackage[lining]{carlito}%
+     \renewcommand{\familydefault}{\sfdefault}}
+    {\usepackage{lmodern}%
+     \PackageWarning{resume}{carlito.sty not found - falling back to lmodern. Install texlive-fonts-extra for Carlito}}
+  \usepackage[expansion=false]{microtype}
+  % pdfTeX builds the fi/fl/ff ligatures straight into the text layer, so the
+  % PDF spells "configuration" as "con<0xFB01>guration" and an ATS matching the
+  % literal keyword misses it. Turning them off keeps the words searchable.
+  \DisableLigatures{family=*}
+  \newcommand{\skill}[1]{\textbf{#1}}
+\fi
+
+% ── Colours ──────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{1A1A2E}
+\definecolor{link}{HTML}{2563EB}
+
+% ── Hyperref ─────────────────────────────────────────────────────────────────
+\hypersetup{colorlinks=true, urlcolor=link, hidelinks, pdfnewwindow=true, linkbordercolor={1 1 1},
+  pdftitle={Samy Tamim - Backend and AI Developer Resume},
+  pdfauthor={Samy Tamim},
+  pdfsubject={Data Engineer},
+  pdfkeywords={Data Engineer, Kafka, Spark, Snowflake, Pipelines, Streaming, ETL, ELT, MQTT, Telemetry, Ingestion, Redis, Caching, PostgreSQL, MySQL, SQL Tuning, Query Optimization, Statelessness, Batch Processing, Data Modeling}}
+
+% ── Section styling ──────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\normalsize\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-0.38em}\rule{\linewidth}{0.7pt}\vspace{-0.33em}]
+
+\titlespacing{\section}{0pt}{0.62em}{0.30em}
+
+% ── List styling ─────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin = 1.1em,
+  itemsep    = 1.30pt,
+  topsep     = 1.70pt,
+  parsep     = 0pt,
+  partopsep  = 0pt
+}
+
+% ── Helper commands ───────────────────────────────────────────────────────────
+\newcommand{\entry}[2]{%
+  \noindent\textbf{#1}\hfill{\small\textbf{#2}}\vspace{0.04em}%
+}
+\newcommand{\subentry}[2]{%
+  \noindent{\small #1}\hfill{\footnotesize #2}\vspace{0.04em}%
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{1.02}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ── Header ───────────────────────────────────────────────────────────────────
+% Tip: match the headline to the target posting's title (e.g. "Senior Software Engineer")
+% only if you can defend it in an interview.
+\begin{center}
+  {\LARGE\bfseries\color{accent} Samy Tamim}\\[1.5pt]
+  {\small Data Engineer \textbar{} Automated Pipelines for Massive Data Loads}\\[1.5pt]
+  \footnotesize
+  +33 781 805 041 \enspace\textbullet\enspace \href{mailto:contact@samytamim.com}{contact@samytamim.com} \enspace\textbullet\enspace \href{https://linkedin.com/in/samy-tamim}{https://linkedin.com/in/samy-tamim} \enspace\textbullet\enspace \href{https://samytamim.com}{https://samytamim.com} \enspace\textbullet\enspace \href{https://github.com/mylastresort}{https://github.com/mylastresort}
+\end{center}
+
+% ── Summary ──────────────────────────────────────────────────────────────────
+\section{Professional Summary}
+Data engineer building automated pipelines that move massive volumes of data reliably: Kafka-based ingestion and streaming, stateless Python consumers, Redis caching, and query-optimized storage layers. Experienced ingesting high-frequency industrial sensor streams (MQTT) and optimizing relational schemas under real production dashboards.
+
+\section{Experience}
+
+\entry{Software Engineer}{June 2024 – Present}\\
+\subentry{\href{https://um6p.ma/}{UM6P - University Mohammed VI Polytechnic}}{Rabat, Morocco}
+\begin{itemize}
+  % TODO: add real scale metrics here (devices, messages/sec, latency, uptime) if you can state them.
+  \item Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial equipment sensor data through \skill{MQTT} with real-time analytics.
+  \item Built a multi-agent IoT operations assistant on \skill{Google ADK}: specialist sub-agents (assets and devices finder, telemetry agent, PdM agent) in an agent-as-tool pattern, local \skill{Ollama} models and \skill{LiteLLM} as the proxy intermediary layer for reliable tool calls, streaming, reasoning, and about 98 tools exposed through \skill{MCP} with guardrails against hallucination; evaluated models and agent behavior with trajectory-based benchmarks to find model scores.
+  \item Built \skill{Kafka} and \skill{Python} microservices with \skill{Redis} caching, keeping consumers and the whole system \skill{stateless}.
+  \item Evaluated multiple \skill{SPOF} on the platform to ensure the system remains resilient.
+\end{itemize}
+
+\vspace{0.40em}
+
+\entry{Full-Stack Development Intern}{December 2023 – May 2024}\\
+\subentry{\href{https://um6p.ma/}{UM6P - University Mohammed VI Polytechnic}}{Rabat, Morocco}
+\begin{itemize}
+  \item Developed a platform tracking 200+ daily ship movements for fertilizer trade, delivering real-time supply chain insights, with interactive \skill{React.js} and Leaflet.js maps in a cross-functional \skill{Agile} team.
+  \item Engineered a \skill{Flask} REST API with \skill{MySQL}, improving dashboard performance via query optimization and caching.
+\end{itemize}
+
+% ── Projects ─────────────────────────────────────────────────────────────────
+\section{Projects}
+% Auto-generated from src/data/projects.md (validated + done, score >= 7)
+\entry{Total Perspective Vortex}{}
+\subentry{Python, MNE, scikit-learn, NumPy, SciPy}{}
+\begin{itemize}
+  \item Parsed and visualized PhysioNet EEG data with MNE, filtering raw signals and extracting per-channel frequency power features.
+  \item Implemented a CSP-style dimensionality reduction algorithm integrated as a scikit-learn transformer via BaseEstimator and TransformerMixin.
+\end{itemize}
+
+\vspace{0.40em}
+
+\entry{\href{https://github.com/mylastresort/hypertube}{Hypertube Video Streaming Platform}}{December 2025}
+\subentry{Go, Next.js, PostgreSQL, Node.js, OAuth2, HLS}{}
+\begin{itemize}
+  \item Built a scalable Go backend with HLS streaming and optimized cache management for efficient video delivery.
+  \item Designed a PostgreSQL schema with query optimization and connection pooling for improved data retrieval performance.
+\end{itemize}
+
+\section{Education}
+
+\entry{\href{https://www.42network.org/}{42 Paris}, Paris, France}{Expected Feb 2027}\\
+\subentry{Master\textquotesingle{}s-level degree (EQF Level 7, Bac+5): \href{https://www.francecompetences.fr/recherche/rncp/39774}{Expert in IT Architecture}, RNCP Level 7\newline Specialization: Data Architecture}{}
+
+% ── Technical Skills ─────────────────────────────────────────────────────────
+\section{Technical Skills}
+
+% The table inherits \small so its rows share the 9pt scale used by the other
+% sections' secondary lines; \arraystretch keeps the row rhythm tight enough
+% to stay on one page.
+{\small
+\renewcommand{\arraystretch}{1.02}
+\begin{tabularx}{\linewidth}{@{} >{\bfseries}l X @{}}
+  Languages           & TypeScript, JavaScript, Python, Go, Java, C, C++, OCaml, SQL \\
+  Frontend            & React, Next.js, Angular, HTML/CSS, Tailwind CSS, Leaflet.js \\
+  Backend \& Data     & Node.js, NestJS, FastAPI, Spring Boot, REST APIs, PostgreSQL, MySQL, MongoDB, Redis, SQL Tuning, Kafka, FFmpeg \\
+  Cloud \& DevOps     & Docker, Docker Compose, Kubernetes, Linux, Vagrant, ArgoCD, GitLab CI/CD, GitHub Actions,\newline Git, AWS, IaC, Terraform, Prometheus, Grafana, System Administration \\
+  Architecture        & Distributed Systems, System Design, Event-Driven Architecture, Microservices, Design Patterns, Scalability, Fault Tolerance \\
+  AI \& Agents        & Google ADK, MCP, Multi-Agent Systems, Ollama (Local LLMs), Tool Calling, Prompt Engineering, LLM Evaluation \\
+  IoT \& Real-Time    & MQTT, WebSockets, Digital Twins, Real-Time Data Processing \\
+  Security            & OAuth2, JWT, OWASP Top 10 \\
+\end{tabularx}
+}
+
+\end{document}

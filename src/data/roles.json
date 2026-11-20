@@ -1,0 +1,53 @@
+{
+  "roles": [
+    {
+      "slug": "ai-engineer",
+      "name": "AI Engineer & Generative AI Engineer",
+      "headline": "AI Engineer | LLM Workflows, Agentic Systems & LLM Ops",
+      "summary": "AI engineer specializing in applied generative AI: orchestrating complex LLM workflows, building multi-agent systems with tool calling, and running LLM Ops (evaluation, observability, guardrails). Experience spans Google ADK multi-agent architectures, ~98 MCP-exposed tools with hallucination guardrails, LiteLLM proxying, and local Ollama model serving, backed by trajectory-based agent evaluation benchmarks.",
+      "keywords": "AI Engineer, Generative AI, LLM, LLM Ops, Agents, Multi-Agent Systems, Agentic Workflows, Google ADK, MCP, Tool Calling, LiteLLM, Ollama, Prompt Engineering, Guardrails, RAG, Vector Database, Model Evaluation, Trajectory Benchmarks, Streaming, Python, TypeScript"
+    },
+    {
+      "slug": "ml-engineer",
+      "name": "Machine Learning (ML) Engineer",
+      "headline": "ML Engineer | Production MLOps, Model Serving & Scalability",
+      "summary": "ML engineer focused on production-grade ML systems: building MLOps pipelines with Kubernetes, Docker, and automated training/eval loops, and ensuring models scale under heavy user load. Hands-on implementing neural networks from scratch (backpropagation, SGD, Adam), stateless Kafka-based inference microservices, and evaluation harnesses that gate model releases.",
+      "keywords": "ML Engineer, MLOps, Kubernetes, Docker, MLflow, Model Serving, Scaling, Training Pipelines, Backpropagation, SGD, Adam, Neural Networks, Kafka, Redis, Stateless Services, Python, Rust, Model Evaluation, CI/CD, Prometheus"
+    },
+    {
+      "slug": "ai-security",
+      "name": "AI Security Engineer",
+      "headline": "AI Security Engineer | Securing Agentic & LLM Systems",
+      "summary": "AI security engineer dedicated to keeping automated systems safe: protecting proprietary data, closing prompt-injection and tool-abuse vulnerabilities, and enforcing compliance across LLM pipelines. Hands-on with hallucination guardrails for ~98 MCP-exposed tools, OAuth2/JWT flows, SPOF analysis for resilience, and OWASP Top 10 practices applied to AI systems.",
+      "keywords": "AI Security, Prompt Injection, LLM Security, Guardrails, Data Protection, Compliance, OWASP Top 10, OAuth2, JWT, Threat Modeling, SPOF, Resilience, MCP, Tool Abuse, Adversarial, Privacy, Automated Systems"
+    },
+    {
+      "slug": "data-engineer",
+      "name": "Data Engineer",
+      "headline": "Data Engineer | Automated Pipelines for Massive Data Loads",
+      "summary": "Data engineer building automated pipelines that move massive volumes of data reliably: Kafka-based ingestion and streaming, stateless Python consumers, Redis caching, and query-optimized storage layers. Experienced ingesting high-frequency industrial sensor streams (MQTT) and optimizing relational schemas under real production dashboards.",
+      "keywords": "Data Engineer, Kafka, Spark, Snowflake, Pipelines, Streaming, ETL, ELT, MQTT, Telemetry, Ingestion, Redis, Caching, PostgreSQL, MySQL, SQL Tuning, Query Optimization, Statelessness, Batch Processing, Data Modeling"
+    },
+    {
+      "slug": "ai-db-architect",
+      "name": "AI / Database Architect",
+      "headline": "AI / Database Architect | Vector, Semantic & Agent Infrastructure",
+      "summary": "Architect designing the information backbone autonomous AI agents rely on: vector databases, semantic layers, and knowledge graphs for retrieval. Combines distributed-systems architecture expertise (event-driven design, digital twins, fault-tolerance analysis) with hands-on vector retrieval design for agentic systems, structuring telemetry and knowledge so agents find the right context at the right time.",
+      "keywords": "Database Architect, AI Infrastructure, Vector Database, Semantic Layer, Knowledge Graphs, RAG Architecture, Information Retrieval, Distributed Systems, System Design, Event-Driven Architecture, Microservices, Digital Twin, Scalability, Fault Tolerance, Pinecone, Embeddings, Schema Design"
+    },
+    {
+      "slug": "cv-nlp",
+      "name": "Computer Vision & NLP Specialist",
+      "headline": "Computer Vision & NLP Specialist | Applied Perception & Language",
+      "summary": "Specialist applying computer vision and NLP to real-world domains: medical-adjacent scan interpretation patterns, autonomous robotics perception, and language systems for operations. Builds from first principles (multilayer perceptron with backpropagation in Rust) up to applied NLP pipelines feeding agentic systems, with telemetry-driven spatial awareness for industrial monitoring.",
+      "keywords": "Computer Vision, NLP, Natural Language Processing, Perception, Robotics, Medical Imaging, Spatial Computing, Object Detection, Segmentation, Multilayer Perceptron, Backpropagation, Rust, Python, Language Models, Telemetry, Digital Twin, Autonomous Systems"
+    },
+    {
+      "slug": "research-scientist",
+      "name": "AI Research Scientist",
+      "headline": "AI Research Scientist | Neural Architectures & Learning Systems",
+      "summary": "Research-oriented engineer investigating neural architectures and learning dynamics from first principles: implementing multilayer perceptrons with backpropagation, SGD and Adam from scratch in Rust, studying optimizer behavior, early stopping, and learning-curve diagnostics. Strong foundation in distributed systems research methods — formulating hypotheses, designing experiments, and measuring trajectory-level agent behavior.",
+      "keywords": "Research Scientist, Neural Architectures, Backpropagation, Optimizers, SGD, Adam, Learning Dynamics, Experiment Design, Model Evaluation, Trajectory Benchmarks, Rust, Python, Scientific Method, Ablation, Learning Curves, Deep Learning"
+    }
+  ]
+}
