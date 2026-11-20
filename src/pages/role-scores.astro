@@ -34,14 +34,13 @@ const generated = roleScores.generated
             <div class="article-body">
               <table>
                 <thead>
-                  <tr><th>Project</th><th class="score-col">Score</th><th>Status</th></tr>
+                  <tr><th>Project</th><th class="score-col">Score</th></tr>
                 </thead>
                 <tbody>
                   {role.projects.map((p) => (
                     <tr>
                       <td>{p.name}{p.kind === 'experience' ? ' (work experience)' : ''}</td>
                       <td class="score-col"><strong>{p.score}</strong> / 10</td>
-                      <td>{p.status === 'validated' ? 'validated' : 'pending'}</td>
                     </tr>
                   ))}
                 </tbody>

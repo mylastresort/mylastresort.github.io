@@ -9,181 +9,151 @@
         {
           "name": "Multi-Agent IoT Operations Assistant",
           "score": 10,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Agent Smith",
           "score": 9,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Context",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Wisdom",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "RAG against the machine",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Understanding Customer",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Datomic",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multilayer Perceptron",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Job Control System",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Supercharge",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Total Perspective Vortex",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ftl quantum",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Hypertube Video Streaming Platform",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Expert System",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Amazon Co-purchase",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Churn Prediction",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Myspotify",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Digital Twin IoT Platform",
           "score": 3,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Ship Movement Platform",
           "score": 3,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Leaffliction",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Learn2Slither",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Gomoku",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kleene",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ready Set Boole",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Enter the Matrix",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Tweets Sentiment Analysis",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Uber Taxi Demand Forecast",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kalman",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Music Room",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "krpsim",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         }
       ]
@@ -196,181 +166,151 @@
         {
           "name": "Multilayer Perceptron",
           "score": 10,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Churn Prediction",
           "score": 9,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Wisdom",
           "score": 8,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Agent Smith",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Datomic",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multi-Agent IoT Operations Assistant",
           "score": 7,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Job Control System",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Supercharge",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Hypertube Video Streaming Platform",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Amazon Co-purchase",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Myspotify",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Context",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "RAG against the machine",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Digital Twin IoT Platform",
           "score": 6,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Ship Movement Platform",
           "score": 6,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Leaffliction",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Total Perspective Vortex",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Understanding Customer",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Learn2Slither",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ftl quantum",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Expert System",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ready Set Boole",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Enter the Matrix",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "krpsim",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Tweets Sentiment Analysis",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kalman",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Music Room",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kleene",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Uber Taxi Demand Forecast",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Gomoku",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         }
       ]
@@ -383,175 +323,146 @@
         {
           "name": "Agent Smith",
           "score": 10,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multi-Agent IoT Operations Assistant",
           "score": 9,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Inception-of-Context",
           "score": 8,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Wisdom",
           "score": 8,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "RAG against the machine",
           "score": 8,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Datomic",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Expert System",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Understanding Customer",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Leaffliction",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multilayer Perceptron",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Job Control System",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Total Perspective Vortex",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Supercharge",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Amazon Co-purchase",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Churn Prediction",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Digital Twin IoT Platform",
           "score": 4,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Ftl quantum",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Gomoku",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kleene",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Myspotify",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Tweets Sentiment Analysis",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Hypertube Video Streaming Platform",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ship Movement Platform",
           "score": 1,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Learn2Slither",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Music Room",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ready Set Boole",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Enter the Matrix",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "krpsim",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Uber Taxi Demand Forecast",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         }
       ]
@@ -564,181 +475,151 @@
         {
           "name": "Digital Twin IoT Platform",
           "score": 10,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Datomic",
           "score": 9,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ship Movement Platform",
           "score": 9,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "RAG against the machine",
           "score": 8,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Amazon Co-purchase",
           "score": 8,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Agent Smith",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Context",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Wisdom",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Leaffliction",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Total Perspective Vortex",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Hypertube Video Streaming Platform",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multi-Agent IoT Operations Assistant",
           "score": 6,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Job Control System",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Supercharge",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kleene",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Churn Prediction",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Myspotify",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Tweets Sentiment Analysis",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Understanding Customer",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multilayer Perceptron",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Learn2Slither",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kalman",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Expert System",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ready Set Boole",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ftl quantum",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Gomoku",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "krpsim",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Uber Taxi Demand Forecast",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Music Room",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Enter the Matrix",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         }
       ]
@@ -751,181 +632,151 @@
         {
           "name": "Datomic",
           "score": 10,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Digital Twin IoT Platform",
           "score": 10,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Inception-of-Context",
           "score": 9,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Wisdom",
           "score": 9,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "RAG against the machine",
           "score": 9,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Expert System",
           "score": 9,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Agent Smith",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multi-Agent IoT Operations Assistant",
           "score": 6,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Supercharge",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Hypertube Video Streaming Platform",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Understanding Customer",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ship Movement Platform",
           "score": 5,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Amazon Co-purchase",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Churn Prediction",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Tweets Sentiment Analysis",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Leaffliction",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multilayer Perceptron",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Myspotify",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Job Control System",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Learn2Slither",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Total Perspective Vortex",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ftl quantum",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kalman",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Music Room",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Gomoku",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kleene",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ready Set Boole",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Enter the Matrix",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "krpsim",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Uber Taxi Demand Forecast",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         }
       ]
@@ -938,181 +789,151 @@
         {
           "name": "Multilayer Perceptron",
           "score": 10,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Wisdom",
           "score": 8,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Leaffliction",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Total Perspective Vortex",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Churn Prediction",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Understanding Customer",
           "score": 7,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Agent Smith",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "RAG against the machine",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Digital Twin IoT Platform",
           "score": 6,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Ship Movement Platform",
           "score": 6,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Expert System",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Enter the Matrix",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Amazon Co-purchase",
           "score": 6,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Context",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multi-Agent IoT Operations Assistant",
           "score": 5,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Job Control System",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "krpsim",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Tweets Sentiment Analysis",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Datomic",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Learn2Slither",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Supercharge",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kalman",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Hypertube Video Streaming Platform",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Gomoku",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kleene",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ready Set Boole",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Myspotify",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Uber Taxi Demand Forecast",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ftl quantum",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Music Room",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         }
       ]
@@ -1125,181 +946,151 @@
         {
           "name": "Multilayer Perceptron",
           "score": 10,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Wisdom",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Enter the Matrix",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Churn Prediction",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Understanding Customer",
           "score": 5,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Agent Smith",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Datomic",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Multi-Agent IoT Operations Assistant",
           "score": 4,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Ship Movement Platform",
           "score": 4,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Job Control System",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Learn2Slither",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Total Perspective Vortex",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Supercharge",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Expert System",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Amazon Co-purchase",
           "score": 4,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Inception-of-Context",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "RAG against the machine",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Digital Twin IoT Platform",
           "score": 3,
-          "status": "validated",
           "kind": "experience"
         },
         {
           "name": "Leaffliction",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ftl quantum",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kalman",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Hypertube Video Streaming Platform",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Gomoku",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Ready Set Boole",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "krpsim",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Myspotify",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Tweets Sentiment Analysis",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Uber Taxi Demand Forecast",
           "score": 3,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "ft kleene",
           "score": 2,
-          "status": "validated",
           "kind": "project"
         },
         {
           "name": "Music Room",
           "score": 1,
-          "status": "validated",
           "kind": "project"
         }
       ]
