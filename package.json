@@ -14,7 +14,8 @@
     "resumes": "node scripts/resumes/generate.mjs",
     "pdf:resumes": "node scripts/resumes/compile.mjs",
     "score": "node scripts/resumes/score.mjs",
-    "sync:pinecone": "node scripts/resumes/sync-pinecone.mjs"
+    "sync:pinecone": "node scripts/resumes/sync-pinecone.mjs",
+    "pending": "node scripts/resumes/pending.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.1.0",
