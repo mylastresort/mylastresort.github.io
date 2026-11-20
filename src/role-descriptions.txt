@@ -1,0 +1,30 @@
+The roles
+
+AI Engineer & Generative AI Engineer
+------------------------------------
+This is currently the fastest-growing title in tech. These engineers do not necessarily train base models; instead, they use APIs, orchestrate complex LLM workflows, build agentic systems, and handle LLM Ops.
+
+Machine Learning (ML) Engineer
+------------------------------
+Demand remains incredibly high for specialists who build production-grade MLOps pipelines using tools like Kubernetes, Docker, and MLflow. Companies want people who ensure models can scale under heavy user loads.
+
+AI Security Engineer
+--------------------
+A massive area of focus as companies prioritize keeping automated systems safe, protecting proprietary data, avoiding prompt-injection vulnerabilities, and ensuring compliance.
+
+Data Engineer
+-------------
+Often called the unsung heroes of the AI boom, data engineers are seeing incredible demand and "golden handcuff" retention offers. Organizations are heavily recruiting them to build automated data pipelines (using Spark, Kafka, and Snowflake) to handle massive token-processing loads.
+
+AI / Database Architect
+-----------------------
+These professionals design the overarching infrastructure strategy. Right now, there is an intense demand for senior architects who understand how to structure vector databases, semantic layers, and knowledge graphs that autonomous AI agents rely on to retrieve information.
+
+Computer Vision & NLP Specialist
+--------------------------------
+High demand continues in specialized industries like healthcare (medical scan interpretation), logistics (autonomous robotics), and spatial computing.
+
+AI Research Scientist
+---------------------
+Still the highest-paying and most elite role, primarily dominated by PhDs working at frontier labs (like Google DeepMind or Meta AI) pushing the boundaries of neural architectures.
+
