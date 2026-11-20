@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Sidebar from '../components/Sidebar.astro'
+import roleScores from '../data/role-scores.json'
+
+// Score snapshot: per-role project scores computed by semantic similarity
+// against a Pinecone vector index (role profile -> project chunks), then
+// normalized rank-based to each role's strongest match (0-10).
+const generated = roleScores.generated
+---
+
+<Base
+  title="Role Scores - Samy Tamim"
+  description="Projects scored per target role (AI Engineer, ML Engineer, AI Security, Data Engineer, AI/DB Architect, CV & NLP, Research Scientist) with role descriptions."
+  path="/role-scores/"
+>
+  <Nav />
+  <div class="page-wrap active">
+    <div class="page-inner">
+      <div class="content-area">
+        <div class="breadcrumb"><span>~ / </span>role-scores</div>
+
+        <h2 class="section-title">Projects × Roles — score matrix</h2>
+        <p class="tagline">
+          Every project scored 0–10 per target role. Scores are computed, not hand-picked: each role's
+          profile is embedded and searched against an embedding of every project; the resulting similarity
+          is rank-normalized to the role's strongest match. Snapshot: {generated}.
+        </p>
+
+        {roleScores.roles.map((role) => (
+          <section class="role-block">
+            <h3 class="role-name">{role.name}</h3>
+            <div class="article-body">
+              <table>
+                <thead>
+                  <tr><th>Project</th><th class="score-col">Score</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  {role.projects.map((p) => (
+                    <tr>
+                      <td>{p.name}{p.kind === 'experience' ? ' (work experience)' : ''}</td>
+                      <td class="score-col"><strong>{p.score}</strong> / 10</td>
+                      <td>{p.status === 'validated' ? 'validated' : 'pending'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ))}
+
+        <h2 class="section-title">The roles</h2>
+        <div class="article-body">
+          <ul class="role-descriptions">
+            {roleScores.roles.map((role) => (
+              <li>
+                <strong>{role.name}</strong> — {role.description}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <Sidebar />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .role-block { margin-bottom: 2rem; }
+  .role-name { margin: 0 0 0.5rem; font-size: 1.05rem; }
+  .score-col { text-align: right; white-space: nowrap; }
+  .role-descriptions li { margin-bottom: 0.9rem; }
+</style>

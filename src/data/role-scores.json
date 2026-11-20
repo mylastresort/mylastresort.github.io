@@ -1,0 +1,1308 @@
+{
+  "generated": "2026-11-20",
+  "roles": [
+    {
+      "slug": "ai-engineer",
+      "name": "AI Engineer & Generative AI Engineer",
+      "description": "This is currently the fastest-growing title in tech. These engineers do not necessarily train base models; instead, they use APIs, orchestrate complex LLM workflows, build agentic systems, and handle LLM Ops.",
+      "projects": [
+        {
+          "name": "Multi-Agent IoT Operations Assistant",
+          "score": 10,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Agent Smith",
+          "score": 9,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Context",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Wisdom",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "RAG against the machine",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Understanding Customer",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Datomic",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multilayer Perceptron",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Job Control System",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Supercharge",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Total Perspective Vortex",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ftl quantum",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Hypertube Video Streaming Platform",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Expert System",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Amazon Co-purchase",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Churn Prediction",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Myspotify",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Digital Twin IoT Platform",
+          "score": 3,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Ship Movement Platform",
+          "score": 3,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Leaffliction",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Learn2Slither",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Gomoku",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kleene",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ready Set Boole",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Enter the Matrix",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Tweets Sentiment Analysis",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Uber Taxi Demand Forecast",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kalman",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Music Room",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "krpsim",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        }
+      ]
+    },
+    {
+      "slug": "ml-engineer",
+      "name": "Machine Learning (ML) Engineer",
+      "description": "Demand remains incredibly high for specialists who build production-grade MLOps pipelines using tools like Kubernetes, Docker, and MLflow. Companies want people who ensure models can scale under heavy user loads.",
+      "projects": [
+        {
+          "name": "Multilayer Perceptron",
+          "score": 10,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Churn Prediction",
+          "score": 9,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Wisdom",
+          "score": 8,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Agent Smith",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Datomic",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multi-Agent IoT Operations Assistant",
+          "score": 7,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Job Control System",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Supercharge",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Hypertube Video Streaming Platform",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Amazon Co-purchase",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Myspotify",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Context",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "RAG against the machine",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Digital Twin IoT Platform",
+          "score": 6,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Ship Movement Platform",
+          "score": 6,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Leaffliction",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Total Perspective Vortex",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Understanding Customer",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Learn2Slither",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ftl quantum",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Expert System",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ready Set Boole",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Enter the Matrix",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "krpsim",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Tweets Sentiment Analysis",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kalman",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Music Room",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kleene",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Uber Taxi Demand Forecast",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Gomoku",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        }
+      ]
+    },
+    {
+      "slug": "ai-security",
+      "name": "AI Security Engineer",
+      "description": "A massive area of focus as companies prioritize keeping automated systems safe, protecting proprietary data, avoiding prompt-injection vulnerabilities, and ensuring compliance.",
+      "projects": [
+        {
+          "name": "Agent Smith",
+          "score": 10,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multi-Agent IoT Operations Assistant",
+          "score": 9,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Inception-of-Context",
+          "score": 8,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Wisdom",
+          "score": 8,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "RAG against the machine",
+          "score": 8,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Datomic",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Expert System",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Understanding Customer",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Leaffliction",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multilayer Perceptron",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Job Control System",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Total Perspective Vortex",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Supercharge",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Amazon Co-purchase",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Churn Prediction",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Digital Twin IoT Platform",
+          "score": 4,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Ftl quantum",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Gomoku",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kleene",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Myspotify",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Tweets Sentiment Analysis",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Hypertube Video Streaming Platform",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ship Movement Platform",
+          "score": 1,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Learn2Slither",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Music Room",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ready Set Boole",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Enter the Matrix",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "krpsim",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Uber Taxi Demand Forecast",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        }
+      ]
+    },
+    {
+      "slug": "data-engineer",
+      "name": "Data Engineer",
+      "description": "Often called the unsung heroes of the AI boom, data engineers are seeing incredible demand and \"golden handcuff\" retention offers. Organizations are heavily recruiting them to build automated data pipelines (using Spark, Kafka, and Snowflake) to handle massive token-processing loads.",
+      "projects": [
+        {
+          "name": "Digital Twin IoT Platform",
+          "score": 10,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Datomic",
+          "score": 9,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ship Movement Platform",
+          "score": 9,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "RAG against the machine",
+          "score": 8,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Amazon Co-purchase",
+          "score": 8,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Agent Smith",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Context",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Wisdom",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Leaffliction",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Total Perspective Vortex",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Hypertube Video Streaming Platform",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multi-Agent IoT Operations Assistant",
+          "score": 6,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Job Control System",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Supercharge",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kleene",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Churn Prediction",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Myspotify",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Tweets Sentiment Analysis",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Understanding Customer",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multilayer Perceptron",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Learn2Slither",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kalman",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Expert System",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ready Set Boole",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ftl quantum",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Gomoku",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "krpsim",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Uber Taxi Demand Forecast",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Music Room",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Enter the Matrix",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        }
+      ]
+    },
+    {
+      "slug": "ai-db-architect",
+      "name": "AI / Database Architect",
+      "description": "These professionals design the overarching infrastructure strategy. Right now, there is an intense demand for senior architects who understand how to structure vector databases, semantic layers, and knowledge graphs that autonomous AI agents rely on to retrieve information.",
+      "projects": [
+        {
+          "name": "Datomic",
+          "score": 10,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Digital Twin IoT Platform",
+          "score": 10,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Inception-of-Context",
+          "score": 9,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Wisdom",
+          "score": 9,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "RAG against the machine",
+          "score": 9,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Expert System",
+          "score": 9,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Agent Smith",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multi-Agent IoT Operations Assistant",
+          "score": 6,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Supercharge",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Hypertube Video Streaming Platform",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Understanding Customer",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ship Movement Platform",
+          "score": 5,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Amazon Co-purchase",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Churn Prediction",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Tweets Sentiment Analysis",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Leaffliction",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multilayer Perceptron",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Myspotify",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Job Control System",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Learn2Slither",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Total Perspective Vortex",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ftl quantum",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kalman",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Music Room",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Gomoku",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kleene",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ready Set Boole",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Enter the Matrix",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "krpsim",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Uber Taxi Demand Forecast",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        }
+      ]
+    },
+    {
+      "slug": "cv-nlp",
+      "name": "Computer Vision & NLP Specialist",
+      "description": "High demand continues in specialized industries like healthcare (medical scan interpretation), logistics (autonomous robotics), and spatial computing.",
+      "projects": [
+        {
+          "name": "Multilayer Perceptron",
+          "score": 10,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Wisdom",
+          "score": 8,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Leaffliction",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Total Perspective Vortex",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Churn Prediction",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Understanding Customer",
+          "score": 7,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Agent Smith",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "RAG against the machine",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Digital Twin IoT Platform",
+          "score": 6,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Ship Movement Platform",
+          "score": 6,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Expert System",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Enter the Matrix",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Amazon Co-purchase",
+          "score": 6,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Context",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multi-Agent IoT Operations Assistant",
+          "score": 5,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Job Control System",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "krpsim",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Tweets Sentiment Analysis",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Datomic",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Learn2Slither",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Supercharge",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kalman",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Hypertube Video Streaming Platform",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Gomoku",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kleene",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ready Set Boole",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Myspotify",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Uber Taxi Demand Forecast",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ftl quantum",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Music Room",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        }
+      ]
+    },
+    {
+      "slug": "research-scientist",
+      "name": "AI Research Scientist",
+      "description": "Still the highest-paying and most elite role, primarily dominated by PhDs working at frontier labs (like Google DeepMind or Meta AI) pushing the boundaries of neural architectures.",
+      "projects": [
+        {
+          "name": "Multilayer Perceptron",
+          "score": 10,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Wisdom",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Enter the Matrix",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Churn Prediction",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Understanding Customer",
+          "score": 5,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Agent Smith",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Datomic",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Multi-Agent IoT Operations Assistant",
+          "score": 4,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Ship Movement Platform",
+          "score": 4,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Job Control System",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Learn2Slither",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Total Perspective Vortex",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Supercharge",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Expert System",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Amazon Co-purchase",
+          "score": 4,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Inception-of-Context",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "RAG against the machine",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Digital Twin IoT Platform",
+          "score": 3,
+          "status": "validated",
+          "kind": "experience"
+        },
+        {
+          "name": "Leaffliction",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ftl quantum",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kalman",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Hypertube Video Streaming Platform",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Gomoku",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Ready Set Boole",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "krpsim",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Myspotify",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Tweets Sentiment Analysis",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Uber Taxi Demand Forecast",
+          "score": 3,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "ft kleene",
+          "score": 2,
+          "status": "validated",
+          "kind": "project"
+        },
+        {
+          "name": "Music Room",
+          "score": 1,
+          "status": "validated",
+          "kind": "project"
+        }
+      ]
+    }
+  ]
+}
