@@ -25,8 +25,7 @@
   - ai-security: 10
   - data-engineer: 7
   - ai-db-architect: 6
-  - computer-vision: 3
-  - nlp: 5
+  - cv-nlp: 6
   - research-scientist: 4
 
 ## Datomic
@@ -48,8 +47,7 @@
   - ai-security: 6
   - data-engineer: 9
   - ai-db-architect: 10
-  - computer-vision: 2
-  - nlp: 5
+  - cv-nlp: 4
   - research-scientist: 4
 
 ## Inception-of-Context
@@ -71,8 +69,7 @@
   - ai-security: 8
   - data-engineer: 7
   - ai-db-architect: 9
-  - computer-vision: 4
-  - nlp: 6
+  - cv-nlp: 5
   - research-scientist: 3
 
 ## Inception-of-Wisdom
@@ -94,8 +91,7 @@
   - ai-security: 8
   - data-engineer: 7
   - ai-db-architect: 9
-  - computer-vision: 4
-  - nlp: 5
+  - cv-nlp: 8
   - research-scientist: 5
 
 ## RAG against the machine
@@ -117,8 +113,7 @@
   - ai-security: 8
   - data-engineer: 8
   - ai-db-architect: 9
-  - computer-vision: 4
-  - nlp: 7
+  - cv-nlp: 6
   - research-scientist: 3
 
 ## Digital Twin IoT Platform
@@ -127,7 +122,7 @@
 - done: false
 - kind: experience
 - link: https://um6p.ma/
-- date: June 2024 – Present
+- date: June 2024 – Dec 2026
 - stack: MQTT, Kafka, Redis, Python, Digital Twins, Predictive Maintenance
 - summary: Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial sensor data through MQTT with real-time analytics.
 - bullets:
@@ -140,8 +135,7 @@
   - ai-security: 4
   - data-engineer: 10
   - ai-db-architect: 10
-  - computer-vision: 4
-  - nlp: 4
+  - cv-nlp: 6
   - research-scientist: 3
 
 ## Multi-Agent IoT Operations Assistant
@@ -163,8 +157,7 @@
   - ai-security: 9
   - data-engineer: 6
   - ai-db-architect: 6
-  - computer-vision: 4
-  - nlp: 5
+  - cv-nlp: 5
   - research-scientist: 4
 
 ## Ship Movement Platform
@@ -185,8 +178,7 @@
   - ai-security: 1
   - data-engineer: 9
   - ai-db-architect: 5
-  - computer-vision: 4
-  - nlp: 3
+  - cv-nlp: 6
   - research-scientist: 4
 
 ## Leaffliction
@@ -208,8 +200,7 @@
   - ai-security: 5
   - data-engineer: 7
   - ai-db-architect: 4
-  - computer-vision: 10
-  - nlp: 5
+  - cv-nlp: 7
   - research-scientist: 3
 
 ## Multilayer Perceptron
@@ -229,8 +220,7 @@
   - ai-security: 5
   - data-engineer: 5
   - ai-db-architect: 4
-  - computer-vision: 2
-  - nlp: 4
+  - cv-nlp: 10
   - research-scientist: 10
 
 ## Job Control System
@@ -251,8 +241,7 @@
   - ai-security: 5
   - data-engineer: 6
   - ai-db-architect: 1
-  - computer-vision: 1
-  - nlp: 3
+  - cv-nlp: 5
   - research-scientist: 4
 
 ## Learn2Slither
@@ -273,8 +262,7 @@
   - ai-security: 1
   - data-engineer: 5
   - ai-db-architect: 1
-  - computer-vision: 1
-  - nlp: 1
+  - cv-nlp: 4
   - research-scientist: 4
 
 ## Total Perspective Vortex
@@ -296,8 +284,7 @@
   - ai-security: 5
   - data-engineer: 7
   - ai-db-architect: 1
-  - computer-vision: 7
-  - nlp: 5
+  - cv-nlp: 7
   - research-scientist: 4
 
 ## Ftl quantum
@@ -319,8 +306,7 @@
   - ai-security: 4
   - data-engineer: 4
   - ai-db-architect: 1
-  - computer-vision: 3
-  - nlp: 4
+  - cv-nlp: 1
   - research-scientist: 3
 
 ## Supercharge
@@ -342,8 +328,7 @@
   - ai-security: 5
   - data-engineer: 6
   - ai-db-architect: 6
-  - computer-vision: 3
-  - nlp: 4
+  - cv-nlp: 4
   - research-scientist: 4
 
 ## ft kalman
@@ -364,8 +349,7 @@
   - ai-security: 0
   - data-engineer: 5
   - ai-db-architect: 1
-  - computer-vision: 4
-  - nlp: 3
+  - cv-nlp: 4
   - research-scientist: 3
 
 ## Hypertube Video Streaming Platform
@@ -386,8 +370,7 @@
   - ai-security: 3
   - data-engineer: 7
   - ai-db-architect: 6
-  - computer-vision: 0
-  - nlp: 1
+  - cv-nlp: 4
   - research-scientist: 3
 
 ## Expert System
@@ -408,8 +391,7 @@
   - ai-security: 6
   - data-engineer: 5
   - ai-db-architect: 9
-  - computer-vision: 3
-  - nlp: 5
+  - cv-nlp: 6
   - research-scientist: 4
 
 ## Music Room
@@ -431,8 +413,7 @@
   - ai-security: 1
   - data-engineer: 3
   - ai-db-architect: 1
-  - computer-vision: 1
-  - nlp: 2
+  - cv-nlp: 1
   - research-scientist: 1
 
 ## Gomoku
@@ -453,8 +434,7 @@
   - ai-security: 4
   - data-engineer: 4
   - ai-db-architect: 1
-  - computer-vision: 3
-  - nlp: 3
+  - cv-nlp: 4
   - research-scientist: 3
 
 ## ft kleene
@@ -475,8 +455,7 @@
   - ai-security: 4
   - data-engineer: 6
   - ai-db-architect: 1
-  - computer-vision: 3
-  - nlp: 5
+  - cv-nlp: 4
   - research-scientist: 2
 
 ## Ready Set Boole
@@ -497,8 +476,7 @@
   - ai-security: 1
   - data-engineer: 5
   - ai-db-architect: 1
-  - computer-vision: 1
-  - nlp: 3
+  - cv-nlp: 4
   - research-scientist: 3
 
 ## Enter the Matrix
@@ -519,8 +497,7 @@
   - ai-security: 1
   - data-engineer: 1
   - ai-db-architect: 1
-  - computer-vision: 1
-  - nlp: 1
+  - cv-nlp: 6
   - research-scientist: 5
 
 ## krpsim
@@ -541,8 +518,7 @@
   - ai-security: 1
   - data-engineer: 4
   - ai-db-architect: 1
-  - computer-vision: 2
-  - nlp: 1
+  - cv-nlp: 5
   - research-scientist: 3
 
 ## Amazon Co-purchase
@@ -564,8 +540,7 @@
   - ai-security: 5
   - data-engineer: 8
   - ai-db-architect: 5
-  - computer-vision: 3
-  - nlp: 4
+  - cv-nlp: 6
   - research-scientist: 4
 
 ## Churn Prediction
@@ -587,8 +562,7 @@
   - ai-security: 5
   - data-engineer: 6
   - ai-db-architect: 5
-  - computer-vision: 4
-  - nlp: 6
+  - cv-nlp: 7
   - research-scientist: 5
 
 ## Myspotify
@@ -610,8 +584,7 @@
   - ai-security: 4
   - data-engineer: 6
   - ai-db-architect: 4
-  - computer-vision: 3
-  - nlp: 5
+  - cv-nlp: 3
   - research-scientist: 3
 
 ## Tweets Sentiment Analysis
@@ -633,8 +606,7 @@
   - ai-security: 4
   - data-engineer: 6
   - ai-db-architect: 5
-  - computer-vision: 3
-  - nlp: 10
+  - cv-nlp: 5
   - research-scientist: 3
 
 ## Uber Taxi Demand Forecast
@@ -656,8 +628,7 @@
   - ai-security: 1
   - data-engineer: 4
   - ai-db-architect: 1
-  - computer-vision: 2
-  - nlp: 3
+  - cv-nlp: 3
   - research-scientist: 3
 
 ## Understanding Customer
@@ -679,6 +650,5 @@
   - ai-security: 6
   - data-engineer: 6
   - ai-db-architect: 6
-  - computer-vision: 4
-  - nlp: 9
+  - cv-nlp: 7
   - research-scientist: 5
