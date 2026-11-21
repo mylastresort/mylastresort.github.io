@@ -54,8 +54,8 @@
 \hypersetup{colorlinks=true, urlcolor=link, hidelinks, pdfnewwindow=true, linkbordercolor={1 1 1},
   pdftitle={Samy Tamim - Backend and AI Developer Resume},
   pdfauthor={Samy Tamim},
-  pdfsubject={Computer Vision & NLP Specialist},
-  pdfkeywords={Computer Vision, NLP, Natural Language Processing, Perception, Robotics, Medical Imaging, Spatial Computing, Object Detection, Segmentation, Multilayer Perceptron, Backpropagation, Rust, Python, Language Models, Telemetry, Digital Twin, Autonomous Systems}}
+  pdfsubject={NLP Specialist},
+  pdfkeywords={NLP, Natural Language Processing, BERT, Transformers, RNN, LSTM, Sentiment Analysis, Intent Classification, TF-IDF, BM25, Word2Vec, Stemming, Lemmatization, N-grams, Cosine Similarity, RAG, Retrieval Augmented Generation, Embeddings, Chatbots, Language Models}}
 
 % ── Section styling ──────────────────────────────────────────────────────────
 \titleformat{\section}
@@ -95,14 +95,16 @@
 % only if you can defend it in an interview.
 \begin{center}
   {\LARGE\bfseries\color{accent} Samy Tamim}\\[1.5pt]
+  {\small NLP Engineer}\\[1.5pt]
   \footnotesize
   +33 781 805 041 \enspace\textbullet\enspace \href{mailto:contact@samytamim.com}{contact@samytamim.com} \enspace\textbullet\enspace \href{https://linkedin.com/in/samy-tamim}{https://linkedin.com/in/samy-tamim} \enspace\textbullet\enspace \href{https://samytamim.com}{https://samytamim.com} \enspace\textbullet\enspace \href{https://github.com/mylastresort}{https://github.com/mylastresort}
 \end{center}
 
 % ── Summary ──────────────────────────────────────────────────────────────────
 \section{Professional Summary}
-Specialist applying computer vision and NLP to real-world domains: medical-adjacent scan interpretation patterns, autonomous robotics perception, and language systems for operations. Builds from first principles (multilayer perceptron with backpropagation in Rust) up to applied NLP pipelines feeding agentic systems, with telemetry-driven spatial awareness for industrial monitoring.
+NLP specialist building language systems end to end: tweet sentiment classification beating 0.832 accuracy with bag-of-words/TF-IDF and n-gram pipelines, BERT/RNN/LSTM intent classifiers for chatbots with fallback handling, and retrieval-augmented generation with BM25 re-ranking over vector indexes. Strong grounding in classical NLP (stemming, lemmatization, word2vec, cosine similarity) bridging into modern transformer and LLM workflows.
 
+% ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
 
 \entry{Software Engineer}{June 2024 – Present}\\
@@ -127,29 +129,11 @@ Specialist applying computer vision and NLP to real-world domains: medical-adjac
 % ── Projects ─────────────────────────────────────────────────────────────────
 \section{Projects}
 % Auto-generated from src/data/projects.md (validated + done, score >= 7)
-\entry{\href{https://github.com/mylastresort/multilayer-perceptron}{Multilayer Perceptron}}{August 2026}\\
-\subentry{Rust, Neural Networks, Backpropagation, SGD, Adam}{}
+\entry{Tweets Sentiment Analysis}{}\\
+\subentry{Python, NLTK, scikit-learn, pandas, NumPy}{}
 \begin{itemize}
-  \item Built a configurable MLP with backpropagation from scratch in Rust, driven by YAML training configs.
-  \item Implemented SGD and Adam optimizers, early stopping, and per-epoch metrics with learning-curve exports.
-\end{itemize}
-
-\vspace{0.40em}
-
-\entry{Total Perspective Vortex}{}\\
-\subentry{Python, MNE, scikit-learn, NumPy, SciPy}{}
-\begin{itemize}
-  \item Parsed and visualized PhysioNet EEG data with MNE, filtering raw signals and extracting per-channel frequency power features.
-  \item Implemented a CSP-style dimensionality reduction algorithm integrated as a scikit-learn transformer via BaseEstimator and TransformerMixin.
-\end{itemize}
-
-\vspace{0.40em}
-
-\entry{Churn Prediction}{}\\
-\subentry{Python, NumPy, pandas, scikit-learn, TensorFlow, Keras}{}
-\begin{itemize}
-  \item Established naive-classifier and random-forest baselines with grid-searched hyperparameters and stratified train/test splitting.
-  \item Solved churn with MLPClassifier (scikit-learn), Keras, and raw TensorFlow, using dropout for regularization.
+  \item Vectorized tweets via bag-of-words and TFIDF with stemming, lemmatization, stop-word removal, and n-grams.
+  \item Found the top-10 most similar tweet pairs per preprocessing variant using cosine similarity.
 \end{itemize}
 
 \section{Education}

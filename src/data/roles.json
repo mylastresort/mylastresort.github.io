@@ -4,7 +4,7 @@
       "slug": "ai-engineer",
       "name": "AI Engineer & Generative AI Engineer",
       "headline": "AI Engineer | LLM Workflows, Agentic Systems & LLM Ops",
-      "summary": "AI engineer specializing in applied generative AI: orchestrating complex LLM workflows, building multi-agent systems with tool calling, and running LLM Ops (evaluation, observability, guardrails). Experience spans Google ADK multi-agent architectures, ~98 MCP-exposed tools with hallucination guardrails, LiteLLM proxying, and local Ollama model serving, backed by trajectory-based agent evaluation benchmarks.",
+      "summary": "AI engineer specializing in applied generative AI: orchestrating complex LLM workflows, building multi-agent systems with tool calling, and running LLM Ops (evaluation, observability, guardrails). Hands-on with Google ADK multi-agent architectures, 98 MCP-exposed tools with guardrails, LiteLLM proxying, local Ollama serving, and trajectory-based evaluation.",
       "keywords": "AI Engineer, Generative AI, LLM, LLM Ops, Agents, Multi-Agent Systems, Agentic Workflows, Google ADK, MCP, Tool Calling, LiteLLM, Ollama, Prompt Engineering, Guardrails, RAG, Vector Database, Model Evaluation, Trajectory Benchmarks, Streaming, Python, TypeScript"
     },
     {
@@ -32,15 +32,22 @@
       "slug": "ai-db-architect",
       "name": "AI / Database Architect",
       "headline": "AI / Database Architect | Vector, Semantic & Agent Infrastructure",
-      "summary": "Architect designing the information backbone autonomous AI agents rely on: vector databases, semantic layers, and knowledge graphs for retrieval. Combines distributed-systems architecture expertise (event-driven design, digital twins, fault-tolerance analysis) with hands-on vector retrieval design for agentic systems, structuring telemetry and knowledge so agents find the right context at the right time.",
+      "summary": "Architect designing the information backbone autonomous AI agents rely on: vector databases, semantic layers, and knowledge graphs for retrieval. Combines distributed-systems architecture expertise (event-driven design, digital twins, fault-tolerance analysis) with hands-on vector retrieval design for agentic systems.",
       "keywords": "Database Architect, AI Infrastructure, Vector Database, Semantic Layer, Knowledge Graphs, RAG Architecture, Information Retrieval, Distributed Systems, System Design, Event-Driven Architecture, Microservices, Digital Twin, Scalability, Fault Tolerance, Pinecone, Embeddings, Schema Design"
     },
     {
-      "slug": "cv-nlp",
-      "name": "Computer Vision & NLP Specialist",
-      "headline": "Computer Vision & NLP Specialist | Applied Perception & Language",
-      "summary": "Specialist applying computer vision and NLP to real-world domains: medical-adjacent scan interpretation patterns, autonomous robotics perception, and language systems for operations. Builds from first principles (multilayer perceptron with backpropagation in Rust) up to applied NLP pipelines feeding agentic systems, with telemetry-driven spatial awareness for industrial monitoring.",
-      "keywords": "Computer Vision, NLP, Natural Language Processing, Perception, Robotics, Medical Imaging, Spatial Computing, Object Detection, Segmentation, Multilayer Perceptron, Backpropagation, Rust, Python, Language Models, Telemetry, Digital Twin, Autonomous Systems"
+      "slug": "computer-vision",
+      "name": "Computer Vision Specialist",
+      "headline": "Computer Vision Engineer | Image Classification, Perception & Spatial Computing",
+      "summary": "Computer vision specialist applying image intelligence to real-world domains: plant-disease classification pipelines (dataset analysis, augmentation, feature extraction, above 90% accuracy), sensor-fusion trajectory tracking for autonomous systems, and EEG motor-imagery classification. Builds perception pipelines from first principles and validates them with rigorous accuracy metrics.",
+      "keywords": "Computer Vision, Image Classification, Data Augmentation, Image Transformation, Feature Extraction, OpenCV, plantCV, Medical Imaging, Healthcare AI, Autonomous Robotics, Spatial Computing, Sensor Fusion, Kalman Filter, EEG, Pattern Recognition, Python"
+    },
+    {
+      "slug": "nlp",
+      "name": "NLP Specialist",
+      "headline": "NLP Engineer | Language Systems, Transformers & Applied LLMs",
+      "summary": "NLP specialist building language systems end to end: tweet sentiment classification beating 0.832 accuracy with bag-of-words/TF-IDF and n-gram pipelines, BERT/RNN/LSTM intent classifiers for chatbots with fallback handling, and retrieval-augmented generation with BM25 re-ranking over vector indexes. Strong grounding in classical NLP (stemming, lemmatization, word2vec, cosine similarity) bridging into modern transformer and LLM workflows.",
+      "keywords": "NLP, Natural Language Processing, BERT, Transformers, RNN, LSTM, Sentiment Analysis, Intent Classification, TF-IDF, BM25, Word2Vec, Stemming, Lemmatization, N-grams, Cosine Similarity, RAG, Retrieval Augmented Generation, Embeddings, Chatbots, Language Models"
     },
     {
       "slug": "research-scientist",

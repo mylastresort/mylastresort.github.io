@@ -27,10 +27,11 @@ const esc = (s) => {
     .replace(/[~^]/g, "");
 };
 
-// The headline/subheadline line under the name is removed entirely (user request).
-// The line ends with a LaTeX linebreak "\\[1.5pt]" — two literal backslashes.
-const headlineRe = /^[ \t]*\{\\small Backend[^\n]*\}\\\\\[1\.5pt\]\n/m;
-const summaryRe = /(\\section\{Professional Summary\}\n)[\s\S]*?(\\section\{Experience\})/;
+// The name line and the headline position inside the \begin{center} block.
+// The headline (after the LARGE name line) is rendered from the role's headline
+// first segment; the line ends with a LaTeX linebreak "\\[1.5pt]".
+const nameLineRe = /(  \{\\LARGE\\bfseries\\color\{accent\} Samy Tamim\}\\\\\[1\.5pt\]\n)(  \{\\small Backend[^\n]*\}\\\\\[1\.5pt\]\n)?/;
+const summaryRe = /(\\section\{Professional Summary\}\n)[\s\S]*?(?=% ── Experience|\\section\{Experience\})/;
 const projectsRe = /(\\section\{Projects\}\n)[\s\S]*?(\\section\{Education\})/;
 
 function projectEntry(p) {
@@ -51,8 +52,11 @@ function projectEntry(p) {
 for (const role of roles) {
   let tex = base;
 
-  tex = tex.replace(headlineRe, "");
-  tex = tex.replace(summaryRe, (m, head, tail) => `${head}${esc(role.summary)}\n\n${tail}`);
+  // Headline: render ONLY the first segment of the role headline (before the pipe).
+  // e.g. "AI Engineer | LLM Workflows, Agentic Systems & LLM Ops" -> "AI Engineer"
+  const title = role.headline.split("|")[0].trim();
+  tex = tex.replace(nameLineRe, `$1  {\\small ${esc(title)}}\\\\[1.5pt]\n`);
+  tex = tex.replace(summaryRe, (m, head) => `${head}${esc(role.summary)}\n\n`);
   tex = tex.replace(/pdfsubject=\{[^}]*\}/, `pdfsubject={${role.name}}`);
   tex = tex.replace(/pdfkeywords=\{[^}]*\}/, `pdfkeywords={${role.keywords}}`);
 
