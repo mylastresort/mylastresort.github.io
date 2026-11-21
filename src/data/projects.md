@@ -122,7 +122,7 @@
 - done: false
 - kind: experience
 - link: https://um6p.ma/
-- date: June 2024 – Dec 2026
+- date: Jun 2024 – Dec 2026
 - stack: MQTT, Kafka, Redis, Python, Digital Twins, Predictive Maintenance
 - summary: Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial sensor data through MQTT with real-time analytics.
 - bullets:
@@ -166,7 +166,7 @@
 - done: false
 - kind: experience
 - link: https://um6p.ma/
-- date: December 2023 – May 2024
+- date: Dec 2023 – May 2024
 - stack: Flask, MySQL, React.js, Leaflet.js
 - summary: Platform tracking 200+ daily ship movements for fertilizer trade with real-time supply chain insights and interactive maps.
 - bullets:
@@ -208,7 +208,7 @@
 - status: validated
 - done: true
 - link: https://github.com/mylastresort/multilayer-perceptron
-- date: August 2026
+- date: Aug 2026
 - stack: Rust, Neural Networks, Backpropagation, SGD, Adam
 - summary: Configurable MLP with backpropagation from scratch in Rust, YAML-driven training, SGD and Adam optimizers, early stopping, learning-curve exports.
 - bullets:
@@ -228,7 +228,7 @@
 - status: validated
 - done: true
 - link: https://github.com/mylastresort/taskmaster
-- date: September 2026
+- date: Sep 2026
 - stack: Go, Job Orchestration, Docker Compose, TOML
 - summary: Supervisor-style job control daemon managing child processes from a config file, with restart policies, hot-reload, and an interactive control shell.
 - bullets:
@@ -357,7 +357,7 @@
 - status: validated
 - done: true
 - link: https://github.com/mylastresort/hypertube
-- date: December 2025
+- date: Dec 2025
 - stack: Go, Next.js, PostgreSQL, Node.js, OAuth2, HLS
 - summary: Scalable Go backend with HLS streaming, PostgreSQL schema with query optimization and connection pooling, Agile delivery with 3 developers.
 - bullets:
