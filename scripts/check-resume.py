@@ -32,6 +32,7 @@ MARGIN_TOLERANCE = 2.5
 # labels, not prose, so the >= 4 words rule does not apply.
 STRUCTURAL_LINES = {
     "Samy Tamim",
+    "AI Data Architect",
     "Professional Summary",
     "Experience",
     "Work Experience",

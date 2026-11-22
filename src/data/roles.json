@@ -30,10 +30,10 @@
     },
     {
       "slug": "ai-db-architect",
-      "name": "AI / Database Architect",
-      "headline": "AI / Database Architect | Vector, Semantic & Agent Infrastructure",
+      "name": "AI Data Architect",
+      "headline": "AI Data Architect | Vector, Semantic & Agent Infrastructure",
       "summary": "Architect designing the information backbone autonomous AI agents rely on: vector databases, semantic layers, and knowledge graphs for retrieval. Combines distributed-systems architecture expertise (event-driven design, digital twins, fault-tolerance analysis) with hands-on vector retrieval design for agentic systems.",
-      "keywords": "Database Architect, AI Infrastructure, Vector Database, Semantic Layer, Knowledge Graphs, RAG Architecture, Information Retrieval, Distributed Systems, System Design, Event-Driven Architecture, Microservices, Digital Twin, Scalability, Fault Tolerance, Pinecone, Embeddings, Schema Design"
+      "keywords": "AI Data Architect, Database Architect, AI Infrastructure, Vector Database, Semantic Layer, Knowledge Graphs, RAG Architecture, Information Retrieval, Distributed Systems, System Design, Event-Driven Architecture, Microservices, Digital Twin, Scalability, Fault Tolerance, Pinecone, Embeddings, Schema Design"
     },
     {
       "slug": "computer-vision",
