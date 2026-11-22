@@ -30,7 +30,7 @@ const esc = (s) => {
 // The name line and the headline position inside the \begin{center} block.
 // The headline (after the LARGE name line) is rendered from the role's headline
 // first segment; the line ends with a LaTeX linebreak "\\[1.5pt]".
-const nameLineRe = /(  \{\\LARGE\\bfseries\\color\{accent\} Samy Tamim\}\\\\\[1\.5pt\]\n)(  \{\\small Backend[^\n]*\}\\\\\[1\.5pt\]\n)?/;
+const nameLineRe = /(  \{\\LARGE\\bfseries\\color\{accent\} Samy Tamim\}\\\\\[1\.5pt\]\n)(  \{\\small [^\n]*\}\\\\\[1\.5pt\]\n)?/;
 const summaryRe = /(\\section\{Professional Summary\}\n)[\s\S]*?(?=% ── Work Experience|\\section\{Work Experience\})/;
 const projectsRe = /(\\section\{Projects\}\n)[\s\S]*?(\\section\{Technical Skills\})/;
 
