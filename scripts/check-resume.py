@@ -41,6 +41,7 @@ STRUCTURAL_LINES = {
     "Technical Skills",
     "Specialization: Data Architecture",
     # French version (resume/resume-fr.tex) structural lines.
+    "Architecte Données IA",
     "Résumé professionnel",
     "Expérience professionnelle",
     "Projets",
