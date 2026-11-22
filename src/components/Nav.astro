@@ -12,11 +12,9 @@ const path = Astro.url.pathname
 const isActive = (href) => (href === '/' ? path === '/' : path.startsWith(href.replace(/\/$/, '')))
 
 const RESUME_URL = '/resume.pdf'
+const RESUME_FR_URL = '/resume-fr.pdf'
 const DOWNLOAD_NAME = 'Samy.Tamim.Resume.pdf'
-const RESUME_LABEL = 'resume (PDF, 104 KB)'
-
-const VIEW_ICON =
-  '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
+const RESUME_LABEL = 'resume (PDF)'
 
 // Both icons are rendered as direct children of the button and swapped by the
 // script below. Two constraints, both load-bearing:
@@ -48,9 +46,16 @@ const MOON_ICON = '<svg class="icon-moon" width="18" height="18" viewBox="0 0 24
         target="_blank"
         rel="noopener noreferrer"
         tabindex="-1"
-        aria-label="View resume as PDF in a new tab"
-        title="View resume as PDF"
-      ><span class="icon" set:html={VIEW_ICON}></span></a>
+        aria-label="View English resume as PDF in a new tab"
+        title="View English resume as PDF">EN</a>
+      <a
+        class="resume-nav-view"
+        href={RESUME_FR_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        tabindex="-1"
+        aria-label="View French resume as PDF in a new tab"
+        title="View French resume as PDF">FR</a>
     </span>
     <button
       id="theme-toggle"

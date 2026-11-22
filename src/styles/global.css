@@ -746,26 +746,18 @@ nav a.active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.875rem;
   opacity: 0;
   overflow: hidden;
-  margin: 0 0.9375rem 0 0.625rem;
+  margin: 0 0 0 0.625rem;
   text-decoration: none;
   transition: opacity 0.15s ease-out;
-}
-
-.resume-nav-view .icon {
-  width: 1.4375rem;
-  height: 1.4375rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.resume-nav-view .icon > svg {
-  width: 100%;
-  height: 100%;
-  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  line-height: 1;
+  padding: 0.18em 0.45em;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  color: var(--muted);
 }
 
 .resume-nav:hover .resume-nav-view,
@@ -776,6 +768,7 @@ nav a.active {
 .resume-nav-view:hover {
   text-decoration: none;
   color: var(--link);
+  border-color: var(--link);
 }
 
 .resume-nav-view:focus-visible {

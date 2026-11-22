@@ -29,11 +29,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Compile resume PDF from LaTeX
-        # Writes public/resume.pdf. This must precede the build: Astro copies
-        # public/ into dist at build time, so a later compile would not ship.
+        # Writes public/resume.pdf and public/resume-fr.pdf. This must precede
+        # the build: Astro copies public/ into dist at build time, so a later
+        # compile would not ship.
         run: |
           docker run --rm -v "$PWD:/workspace" -w /workspace ghcr.io/xu-cheng/texlive-full:latest \
-            sh -eu -c "kpsewhich carlito.sty && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=public -auxdir=/tmp/resume-aux resume/resume.tex && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'T1Crlt-LF' && ! cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -qi 'falling back' && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'Crlt-.*\.pfb' && test -s public/resume.pdf && echo 'resume: Carlito lining figures verified'"
+            sh -eu -c "kpsewhich carlito.sty && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=public -auxdir=/tmp/resume-aux resume/resume.tex resume/resume-fr.tex && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'T1Crlt-LF' && ! cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -qi 'falling back' && cat /tmp/resume-aux/resume.log public/resume.log 2>/dev/null | grep -q 'Crlt-.*\.pfb' && test -s public/resume.pdf && test -s public/resume-fr.pdf && echo 'resume: Carlito lining figures verified'"
       - name: Install poppler-utils
         # The layout check reads word bounding boxes out of the PDF with
         # pdftotext, which ships with poppler-utils and is not preinstalled
