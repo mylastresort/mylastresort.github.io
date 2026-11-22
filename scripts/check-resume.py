@@ -34,6 +34,7 @@ STRUCTURAL_LINES = {
     "Samy Tamim",
     "Professional Summary",
     "Experience",
+    "Work Experience",
     "Projects",
     "Education",
     "Technical Skills",
