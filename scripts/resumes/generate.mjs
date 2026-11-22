@@ -31,8 +31,8 @@ const esc = (s) => {
 // The headline (after the LARGE name line) is rendered from the role's headline
 // first segment; the line ends with a LaTeX linebreak "\\[1.5pt]".
 const nameLineRe = /(  \{\\LARGE\\bfseries\\color\{accent\} Samy Tamim\}\\\\\[1\.5pt\]\n)(  \{\\small Backend[^\n]*\}\\\\\[1\.5pt\]\n)?/;
-const summaryRe = /(\\section\{Professional Summary\}\n)[\s\S]*?(?=% ── Experience|\\section\{Experience\})/;
-const projectsRe = /(\\section\{Projects\}\n)[\s\S]*?(\\section\{Education\})/;
+const summaryRe = /(\\section\{Professional Summary\}\n)[\s\S]*?(?=% ── Work Experience|\\section\{Work Experience\})/;
+const projectsRe = /(\\section\{Projects\}\n)[\s\S]*?(\\section\{Technical Skills\})/;
 
 function projectEntry(p) {
   const bullets = p.bullets.map((b) => `  \\item ${esc(b)}`).join("\n");
