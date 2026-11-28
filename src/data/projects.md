@@ -122,7 +122,7 @@
 - done: false
 - kind: experience
 - link: https://um6p.ma/
-- date: Jun 2024 – Dec 2026
+- date: Jun 2024 – Nov 2026
 - stack: MQTT, Kafka, Redis, Python, Digital Twins, Predictive Maintenance
 - summary: Led architecture and delivery of a digital twin platform for IoT monitoring and predictive maintenance, ingesting industrial sensor data through MQTT with real-time analytics.
 - bullets:
